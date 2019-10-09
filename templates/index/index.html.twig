@@ -2,23 +2,28 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('build/css/main/index.css') }}">
     <title>Eprotest</title>
 </head>
 <body>
-    <main class="wrapper">
-        <div class="wrapper__overlay">
-        </div>
-        <div class="wrapper__logo">LOGO</div>
-        <header class="wrapper__header">
-            <h1 class="wrapper__title">Lorem ipsum dolores</h1>
-            <h2 class="wrapper__subtitle">Lorem ipsum dolores</h2>
-            <form action="" id="wrapper">
-                <input type="text" name="city" placeholder="Wpisz swoją miejscowość">
-            </form>
-        </header>
-    </main>
+<main class="wrapper">
+    <div class="wrapper__overlay">
+    </div>
+    <div class="wrapper__logo">LOGO</div>
+    <header class="wrapper__header">
+        <h1 class="wrapper__title">Lorem ipsum dolores</h1>
+        <h2 class="wrapper__subtitle">Lorem ipsum dolores</h2>
+        <form action="" id="wrapper__form">
+            <input type="text" name="city" placeholder="Wpisz swoją miejscowość">
+            <div class="wrapper__buttons">
+                <a href="" class="wrapper__button">Szukaj lokalizacji</a>
+                <a href="../login/login.html" class="wrapper__button wrapper__button--singup">Dołącz do nas</a>
+            </div>
+        </form>
+    </header>
+    <a href="" class="wrapper__login"><img src="{{ asset('image/user.svg') }}" alt="" class="wrapper__icon"></a>
+</main>
 </body>
 </html>
