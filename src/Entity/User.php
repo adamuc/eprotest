@@ -61,6 +61,16 @@ class User
      */
     private $active;
 
+    /**
+     * @ORM\Column(type="string", length=32, nullable=true)
+     */
+    private $confirmationcode;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $role;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -170,6 +180,30 @@ class User
     public function setActive(bool $active): self
     {
         $this->active = $active;
+
+        return $this;
+    }
+
+    public function getConfirmationcode(): ?string
+    {
+        return $this->confirmationcode;
+    }
+
+    public function setConfirmationcode(?string $confirmationcode): self
+    {
+        $this->confirmationcode = $confirmationcode;
+
+        return $this;
+    }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
 
         return $this;
     }
