@@ -71,6 +71,11 @@ class User
      */
     private $role;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $registrationtime;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -204,6 +209,18 @@ class User
     public function setRole(string $role): self
     {
         $this->role = $role;
+
+        return $this;
+    }
+
+    public function getRegistrationtime(): ?\DateTimeInterface
+    {
+        return $this->registrationtime;
+    }
+
+    public function setRegistrationtime(\DateTimeInterface $registrationtime): self
+    {
+        $this->registrationtime = $registrationtime;
 
         return $this;
     }
