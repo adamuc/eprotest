@@ -6,14 +6,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class IndexController extends Controller
+class AuthController extends Controller
 {
     /**
-     * @Route("/", name="index")
+     * @Route("/login", name="login")
      * @return Symfony\Component\HttpFoundation\Response
      */
-    public function loadIndex()
+    public function loadLogin()
     {
-        return $this->render("index/index.html.twig");
+        return $this->render("login/login.html.twig");
     }
 }
