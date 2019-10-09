@@ -57,11 +57,6 @@ class User
     private $avatar;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $active;
-
-    /**
      * @ORM\Column(type="string", length=32, nullable=true)
      */
     private $confirmationcode;
@@ -173,18 +168,6 @@ class User
     public function setAvatar(?string $avatar): self
     {
         $this->avatar = $avatar;
-
-        return $this;
-    }
-
-    public function getActive(): ?bool
-    {
-        return $this->active;
-    }
-
-    public function setActive(bool $active): self
-    {
-        $this->active = $active;
 
         return $this;
     }
