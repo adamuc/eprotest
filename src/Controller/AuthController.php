@@ -13,11 +13,11 @@ class AuthController extends Controller
      * @Route("/login", name="login")
      * @return Symfony\Component\HttpFoundation\Response
      */
-    public function loadLogin(AuthenticationUtils $authUtils)
+    public function loadLogin(AuthenticationUtils $authUtils): Response
     {
         $e = $authUtils->getLastAuthenticationError();
-        if ($this->isGranted("ROLE_USER")) return $this->redirectToRoute("index");
-        return $this->render("auth/login.html.twig", [ "error" => $e ]);
+        $lastUsername = $authUtils->getLastUsername();
+        return $this->render("auth/login.html.twig", [ "last_username" => $lastUsername, "error" => $e ]);
     }
 
     /**

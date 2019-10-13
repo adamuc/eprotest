@@ -13,10 +13,10 @@
 {% block body %}
     <div class="box">
         <div class="box__colOne">
-            <form class="box__form">
-                {#<input type="text" class="box__input" placeholder="Nazwa użytkownika" name="nick">#}
-                <input type="text" class="box__input" placeholder="E-mail" name="email">
+            <form method="post" class="box__form">
+                <input type="text" value="{{ last_username }}" class="box__input" placeholder="Nazwa użytkownika" name="username">
                 <input type="password" class="box__input" placeholder="Hasło" name="password">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                 <input type="submit" class="box__btn" value="Zaloguj" name="btn">
                 {% if error %}
                     <div class="box__error">{{ error.messageKey | replace({"Invalid credentials." : "Błędna nazwa użytkownika lub hasło!"}) }}</div>
