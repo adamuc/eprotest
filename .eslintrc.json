@@ -5,8 +5,10 @@
   },
   "extends": "airbnb-base",
   "rules": {
-    "indent": ["error", 4],
+    "indent": ["error", 4, { "ignoreComments": true }],
     "comma-dangle": ["error", "never"],
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "semi-style": 0,
+    "spaced-comment": 0
   }
 }
