@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+    {{ encore_entry_link_tags('forum') }}
+{% endblock %}
+
+{% block js %}
+    {{ encore_entry_script_tags('forum') }}
+{% endblock %}
+
+{% block title %}Eprotest{% endblock %}
+
+{% block body %}
+    <main class="wrapper">
+        <section class="wrapper__topBar">
+            <div class="wrapper__logo">
+                <img src="" alt="Logo" class="wrapper__logoImage">
+            </div>
+            <div class="wrapper__searchBar">
+                <input type="text" class="wrapper__search" placeholder="Wyszukaj wydarzenie">
+            </div>
+        </section>
+    </main>
+{% endblock %}

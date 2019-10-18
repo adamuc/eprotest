@@ -123,46 +123,72 @@
         justify-content: center;
         align-items: center;
         .wrapper__inputBox{
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
           width: 100%;
-          .wrapper__input{
-            background: $white;
-            padding: 7.5px 5px;
-            outline: 0;
-            border-top-left-radius: 2.5px;
-            border-bottom-left-radius: 2.5px;
-            border: 0;
-            margin-bottom: 10px;
-            font-size: 16px;
-            width: 100%;
-            height: 20px;
-            @media screen and (min-width: 1920px){
-              font-size: 20px;
-              padding: 10px 5px;
-              width: 110%;
-            }
-          }
-          .wrapper__search{
-            width: 35px;
-            height: 35px;
+          position: relative;
+          .wrapper__row{
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            background: $lightGreen;
-            margin-bottom: 10px;
-            border-top-right-radius: 2.5px;
+            .wrapper__input{
+              background: $white;
+              padding: 7.5px 5px;
+              outline: 0;
+              border-top-left-radius: 2.5px;
+              border: 0;
+              margin-bottom: 10px;
+              font-size: 16px;
+              width: 100%;
+              height: 20px;
+              @media screen and (min-width: 1920px){
+                font-size: 20px;
+                padding: 10px 5px;
+                width: 110%;
+              }
+            }
+            .wrapper__search{
+              width: 35px;
+              height: 35px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: $lightGreen;
+              margin-bottom: 10px;
+              border-top-right-radius: 2.5px;
+              border-bottom-right-radius: 2.5px;
+              .wrapper__searchImage{
+                width: 20px;
+              }
+              @media screen and (min-width: 1920px){
+                padding: 2.5px;
+
+              }
+            }
+          }
+          .wrapper__searchList{
+            width: calc(100% - 32px);
+            min-height: 55%;
+            overflow-y: hidden;
+            position: absolute;
+            top: calc(100% - 10px);
+            left: 0;
+            background: $white;
+            border-top: 1px solid $lightGray;
+            border-bottom-left-radius: 2.5px;
             border-bottom-right-radius: 2.5px;
-            cursor: pointer;
-            -webkit-user-select: none;
-            .wrapper__searchImage{
-              width: 20px;
+            .wrapper__listItem{
+              color: $darkBlue;
+              padding: 10px 5px;
+              font-family: 'Roboto', sans-serif;
+              font-size: 18px;
+              font-weight: 500;
+              &:hover{
+                cursor: pointer;
+                background: lighten($lightGray, 10%);
+              }
             }
             @media screen and (min-width: 1920px){
-              padding: 2.5px;
-
+              width: calc(100% - 35px);
             }
           }
         }
