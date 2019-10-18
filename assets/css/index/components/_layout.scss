@@ -210,6 +210,8 @@
             background: $green;
             text-align: center;
             margin-top: 15px;
+            cursor: pointer;
+            -webkit-user-select: none;
             &--singup{
               background: $yellow;
               @media screen and (min-width: 768px){
