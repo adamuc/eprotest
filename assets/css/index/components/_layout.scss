@@ -155,6 +155,8 @@
             margin-bottom: 10px;
             border-top-right-radius: 2.5px;
             border-bottom-right-radius: 2.5px;
+            cursor: pointer;
+            -webkit-user-select: none;
             .wrapper__searchImage{
               width: 20px;
             }
@@ -182,6 +184,8 @@
             background: $green;
             text-align: center;
             margin-top: 15px;
+            cursor: pointer;
+            -webkit-user-select: none;
             &--singup{
               background: $yellow;
               @media screen and (min-width: 768px){
