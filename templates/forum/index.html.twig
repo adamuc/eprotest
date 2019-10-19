@@ -11,14 +11,58 @@
 {% block title %}Eprotest{% endblock %}
 
 {% block body %}
-    <main class="wrapper">
+    <header class="wrapper">
         <section class="wrapper__topBar">
             <div class="wrapper__logo">
                 <img src="" alt="Logo" class="wrapper__logoImage">
             </div>
             <div class="wrapper__searchBar">
-                <input type="text" class="wrapper__search" placeholder="Wyszukaj wydarzenie">
+                <input type="text" class="wrapper__search" placeholder="Wyszukaj">
+            </div>
+            {#<div class="wrapper__notification">#}
+                {#<img src="" alt="" class="wrapper__notificationImage">#}
+            {#</div>#}
+            <div class="wrapper__user">
+                <img src="{{ asset('image/avatar.jpg') }}" alt="" class="wrapper__userAvatar">
             </div>
         </section>
+    </header>
+    <main class="main">
+        <div class="main__leftBar">
+            <button class="main__add">Utwórz wydarzenie</button>
+
+            <ol class="main__options">
+               <li class="main__item"><img src="{{ asset('image/discussion.png') }}" alt="" class="main__itemImage">Dyskusja</li>
+            </ol>
+            <ol class="main__categories">
+                <li class="main__category all">Wszystkie</li>
+                <li class="main__category eco">Ekologiczny</li>
+                <li class="main__category social">Społeczny</li>
+                <li class="main__category political">Polityczny</li>
+                <li class="main__category religious">Religijny</li>
+            </ol>
+        </div>
+        <div class="main__rightBar">
+            <section class="main__events">
+                <div class="main__event">
+                    <span class="main__categoryLabel">Ekologiczny</span>
+                    <div class="main__logo">
+                        <img src="{{ asset('image/protest.png') }}" alt="" class="main__logoImage">
+                    </div>
+                    <div class="main__text">
+                        <p class="main__title">
+                            Dziura ozonowa zabija nas wszystkich!
+                        </p>
+                        <div class="main__data">
+                            <p class="main__owner">Rafał</p> rozpoczął: <p class="main__date">18.10.2019</p>
+                        </div>
+                        <div class="main__commentCount">
+                            <img src="" alt="" class="main__commentImage">
+                            <p class="main__count"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 {% endblock %}
