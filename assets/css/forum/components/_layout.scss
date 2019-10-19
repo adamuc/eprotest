@@ -1,0 +1,145 @@
+
+.wrapper{
+  .wrapper__topBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    .wrapper__logo{
+      margin: 5px 10px;
+    }
+    .wrapper__searchBar{
+      .wrapper__search{
+        width: 85%;
+        border: 0;
+        background: lighten($lightGray, 12.5%);
+        padding: 5px;
+        border-radius: 2.5px;
+        outline: 0;
+      }
+    }
+    .wrapper__user{
+      width: 40px;
+      height: 40px;
+      margin: 5px 10px;
+      .wrapper__userAvatar{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+.main {
+  .main__leftBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .main__add {
+
+        width: 230px;
+        border-radius: 2.5px;
+        color: $white;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        padding: 7.5px 5px;
+        background: $green;
+        text-align: center;
+        margin-top: 15px;
+      border: 0;
+        @media screen and (min-width: 1920px) {
+          width: 250px;
+          font-size: 24px;
+          padding: 10px 5px;
+        }
+    }
+    .main__options{
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+      padding-bottom: 50px;
+      width: 80%;
+      border-bottom: 1px solid $lightGray;
+      .main__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        .main__itemImage{
+          width: 20px;
+          height: 20px;
+          margin-right: 15px;
+        }
+      }
+    }
+    .main__categories{
+      list-style-type: none;
+      .main__category{
+        padding: 10px 5px;
+        font-size: 18px;
+        font-weight: 500;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        transition: all .2s ease-in;
+        &::before{
+          content: "";
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          position: absolute;
+          top: calc(50% - 7.5px);
+          left: -20px;
+        }
+        &.all{
+          &::before{
+            background: $all;
+          }
+          &:hover{
+            color: $all;
+          }
+        }
+        &.eco{
+          &::before{
+            background: $eco;
+          }
+          &:hover{
+            color: $eco;
+          }
+        }
+        &.social{
+          &::before{
+            background: $social;
+          }
+          &:hover{
+            color: $social;
+          }
+        }
+        &.political{
+          &::before{
+            background: $political;
+          }
+          &:hover{
+            color: $political;
+          }
+        }
+        &.religious{
+          &::before{
+            background: $religious;
+          }
+          &:hover{
+            color: $religious;
+          }
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

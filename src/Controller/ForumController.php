@@ -6,14 +6,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class IndexController extends Controller
+class ForumController extends Controller
 {
     /**
-     * @Route("/", name="index")
+     * @Route("/forum", name="forum")
      * @return Symfony\Component\HttpFoundation\Response
      */
-    public function loadIndex()
+    public function loadForum()
     {
-        return $this->render("index/index.html.twig");
+        return $this->render("forum/index.html.twig");
     }
 }

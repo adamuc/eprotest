@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+    {{ encore_entry_link_tags('index') }}
+{% endblock %}
+
+{% block js %}
+    {{ encore_entry_script_tags('index') }}
+{% endblock %}
+
+{% block title %}Eprotest{% endblock %}
+
+{% block body %}
+    <main class="wrapper">
+        <div class="wrapper__overlay"></div>
+        <div class="wrapper__patternBox"><img src="{{ asset('image/wzor.png') }}" alt="" class="wrapper__pattern"></div>
+        <div class="wrapper__logo">LOGO</div>
+        <header class="wrapper__header">
+            <h1 class="wrapper__title">Niech świat usłyszy twój głos!</h1>
+            <h2 class="wrapper__subtitle">Dołącz do akcji protestacyjnej</h2>
+            <form id="wrapper__form">
+                <div class="wrapper__inputBox">
+                   <div class="wrapper__row">
+                       <input type="text" name="city" placeholder="Wpisz swoją miejscowość" class="wrapper__input" id="searchInput">
+                       <a class="wrapper__search" id="searchLocation"><img src="{{ asset('image/search.png') }}" alt="Lupa" class="wrapper__searchImage"></a>
+                   </div>
+                    <div class="wrapper__searchList">
+                        <div class="wrapper__listItem">Lubliniec</div>
+                    </div>
+                </div>
+                <div class="wrapper__buttons">
+                    <a class="wrapper__button" id="detectLocation">Wykryj lokalizację</a>
+                    <a href="/register" class="wrapper__button wrapper__button--singup">Dołącz do nas</a>
+                </div>
+            </form>
+        </header>
+        <a href="/login" class="wrapper__login"><img src="{{ asset('image/user.svg') }}" alt="" class="wrapper__icon"></a>
+    </main>
+    <section class="result">
+        <h2 class="result__header">Lista protestów w twojej okolicy</h2>
+        <div class="result__box">
+            <img src="{{ asset('image/event.jpg') }}" alt="" class="result__bg">
+            <div class="result__location">
+                <img src="{{ asset('image/location.png') }}" alt="" class="result__locationIcon">
+                <p class="result__city">
+                    Warszawa,
+                </p>
+                <p class="result__street">
+                    ul. Jana Długosza 3
+                </p>
+            </div>
+            <div class="result__details">
+                <div class="result__logo"><img src="{{ asset('image/protest.jpg') }}" alt="" class="result__logoImage"></div>
+                <div class="result__date"><span class="result__date--bigger">19</span>Lipca 2019</div>
+                <div class="result__title">Przykładowy tytuł wydarzenia</div>
+                <div class="result__author">
+                    <img src="{{ asset('image/avatar.jpg') }}" alt="" class="result__authorImage">
+                    <p class="result__authorName">Rafał Kita</p>
+                </div>
+            </div>
+        </div>
+        <div class="result__box">
+            <img src="{{ asset('image/event.jpg') }}" alt="" class="result__bg">
+            <div class="result__location">
+                <img src="{{ asset('image/location.png') }}" alt="" class="result__locationIcon">
+                <p class="result__city">
+                    Warszawa,
+                </p>
+                <p class="result__street">
+                    ul. Jana Długosza 3
+                </p>
+            </div>
+            <div class="result__details">
+                <div class="result__logo"><img src="{{ asset('image/protest.jpg') }}" alt="" class="result__logoImage"></div>
+                <div class="result__date"><span class="result__date--bigger">19</span>Lipca 2019</div>
+                <div class="result__title">Przykładowy tytuł wydarzenia</div>
+                <div class="result__author">
+                    <img src="{{ asset('image/avatar.jpg') }}" alt="" class="result__authorImage">
+                    <p class="result__authorName">Rafał Kita</p>
+                </div>
+            </div>
+        </div>
+        <div class="result__box">
+            <img src="{{ asset('image/event.jpg') }}" alt="" class="result__bg">
+            <div class="result__location">
+                <img src="{{ asset('image/location.png') }}" alt="" class="result__locationIcon">
+                <p class="result__city">
+                    Warszawa,
+                </p>
+                <p class="result__street">
+                    ul. Jana Długosza 3
+                </p>
+            </div>
+            <div class="result__details">
+                <div class="result__logo"><img src="{{ asset('image/protest.jpg') }}" alt="" class="result__logoImage"></div>
+                <div class="result__date"><span class="result__date--bigger">19</span>Lipca 2019</div>
+                <div class="result__title">Przykładowy tytuł wydarzenia</div>
+                <div class="result__author">
+                    <img src="{{ asset('image/avatar.jpg') }}" alt="" class="result__authorImage">
+                    <p class="result__authorName">Rafał Kita</p>
+                </div>
+            </div>
+        </div>
+        <div class="result__box">
+            <img src="{{ asset('image/event.jpg') }}" alt="" class="result__bg">
+            <div class="result__location">
+                <img src="{{ asset('image/location.png') }}" alt="" class="result__locationIcon">
+                <p class="result__city">
+                    Warszawa,
+                </p>
+                <p class="result__street">
+                    ul. Jana Długosza 3
+                </p>
+            </div>
+            <div class="result__details">
+                <div class="result__logo"><img src="{{ asset('image/protest.jpg') }}" alt="" class="result__logoImage"></div>
+                <div class="result__date"><span class="result__date--bigger">19</span>Lipca 2019</div>
+                <div class="result__title">Przykładowy tytuł wydarzenia</div>
+                <div class="result__author">
+                    <img src="{{ asset('image/avatar.jpg') }}" alt="" class="result__authorImage">
+                    <p class="result__authorName">Rafał Kita</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

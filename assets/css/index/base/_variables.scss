@@ -1,0 +1,20 @@
+/* BLUE */
+$darkBlue: #111827;
+$lightBlue: lighten($darkBlue, 2%);
+
+/* WHITE AND GRAY */
+$white: #fff;
+$lightGray: #d6d6d6;
+$gray: darken($lightGray, 10%);
+/* GREEN */
+$green: #19a56f;
+$lightGreen: #74E3B9;
+
+/* YELLOW */
+$yellow: #f2d118;
+
+/* RED */
+$red: #ff5c5c;
+
+/* Black */
+$blackOpacity: rgba(0,0,0,0.75);
