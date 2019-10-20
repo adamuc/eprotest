@@ -67,8 +67,26 @@
       }
     }
     &__logo{
-      display: none;
-      z-index: 2;
+      z-index: 5;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      .wrapper__logoImage{
+        width: 100px;
+        @media screen and (min-width: 640px){
+          width: 170px;
+        }
+        @media screen and (min-width: 1240px){
+          width: 130px;
+        }
+        @media screen and (min-width: 1240px){
+          width: 160px;
+        }
+      }
+      @media screen and (min-width: 640px){
+        left: 20px;
+        top: 15px;
+      }
     }
     &__header{
       display: flex;
@@ -166,9 +184,10 @@
             }
           }
           .wrapper__searchList{
+            display: none;
             width: calc(100% - 32px);
             min-height: 55%;
-            overflow-y: hidden;
+            overflow-y: scroll;
             position: absolute;
             top: calc(100% - 10px);
             left: 0;
