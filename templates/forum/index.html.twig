@@ -17,7 +17,7 @@
                 <img src="{{ asset('image/logo_dark.svg') }}" alt="Logo" class="wrapper__logoImage">
             </div>
             <div class="wrapper__searchBar">
-                <input type="text" class="wrapper__search" placeholder="Wyszukaj">
+                <input type="text" class="wrapper__search" placeholder="Wyszukaj...">
             </div>
             {#<div class="wrapper__notification">#}
                 {#<img src="" alt="" class="wrapper__notificationImage">#}
@@ -82,11 +82,4 @@
             </section>
         </div>
     </main>
-    <script type="text/javascript">
-        $(document).read(() =>{
-           $('.wrapper__user').hover(()=>{
-              $('.wrapper__userOption').fadeIn(300);
-           });
-        });
-    </script>
 {% endblock %}
