@@ -24,6 +24,8 @@
                 <div class="wrapper__logo"><img src="{{ asset('image/logo_dark.svg') }}" alt="" class="wrapper__logoImage"></div>
                 <div class="wrapper__colOne">
                 <input type="text" name="title" class="wrapper__input" placeholder="Tytuł wydarzenia"/>
+                <input type="date" name="date" class="wrapper__input" placeholder="Data wydarzenia"/>
+                <input type="time" name="time" class="wrapper__input" placeholder="Godzina rozpoczęcia"/>
                 <select name="category" id="" class="wrapper__select">
                     <option value="default" class="wrapper__option" disabled selected hidden>Wybierz kategorię protestu</option>
                     <option value="ekologiczny" class="wrapper__option">Ekologiczny</option>
@@ -38,14 +40,14 @@
                 </select>
                 <input type="text" name="startPlace" class="wrapper__input" placeholder="Miejsce rozpoczęcia"/>
                 <input type="text" name="finishPlace" class="wrapper__input" placeholder="Miejsce zakończenia"/>
+                </div>
+                <div class="wrapper__colTwo">
                     <div class="wrapper__row">
                         <label for="logo" class="wrapper__clickArea"><span>Dodaj logo swojego protestu<br>Dopuszczalne formaty to JPG, JPEG i PNG</span></label>
                         <input type="file" name="logo[]" id="logo" class="wrapper__file" accept=".jpg,.jpeg,.png">
                         <label for="bgImage" class="wrapper__clickArea --right"><span>Dodaj tło wydarzenia<br>Dopuszczalne formaty to JPG, JPEG i PNG</span></label>
                         <input type="file" name="bgImage[]" id="background" class="wrapper__file" accept=".jpg,.jpeg,.png">
                     </div>
-                </div>
-                <div class="wrapper__colTwo">
                 <textarea name="description" id="" cols="30" rows="10" class="wrapper__textarea" placeholder="Opis wydarzenia"></textarea>
                 <div class="wrapper_map" id="mapid"></div>
                 <input type="submit" value="Dodaj" class="wrapper__submit">
