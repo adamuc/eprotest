@@ -55,11 +55,12 @@ class AuthController extends Controller
             if (strlen($username) > 32 || strlen($username) < 4) return new Response(1, 400);
             if (strlen($email) > 254) return new Response(2, 400);
             if (strlen($password) > 255 || strlen($password) < 8) return new Response(3, 400);
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) return new Response(4, 400);
-            if ($password != $rpassword) return new Response(5, 400);
+            if ($password != $rpassword) return new Response(4, 400);
 
-            if($repository->findOneByUsername($username)) return new Response(100, 400);
-            if($repository->findOneByUsername($email)) return new Response(101, 400);
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) return new Response(100, 400);
+            if($repository->findOneByUsername($username)) return new Response(101, 400);
+            if($repository->findOneByEmail($email)) return new Response(102, 400);
+            
 
             $user = new User();
             $datetime = new \DateTime(null, new \DateTimeZone("UTC"));
