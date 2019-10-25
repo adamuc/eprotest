@@ -25,13 +25,13 @@
             <div class="wrapper__user">
                 <img src="{{ asset('image/avatar.png') }}" alt="" class="wrapper__userAvatar">
                 <ol class="wrapper__userOption">
-                    <li class="wrapper___optionItem">
+                    <li class="wrapper___optionItem" id="openProfile">
                         <img src="{{ asset('image/user.svg') }}" alt="" class="wrapper__itemImage"> Profil
                     </li>
-                    <li class="wrapper___optionItem">
+                    <li class="wrapper___optionItem" id="openSettings">
                         <img src="{{ asset('image/settings.svg') }}" alt="" class="wrapper__itemImage"> Ustawienia
                     </li>
-                    <li class="wrapper___optionItem logout">
+                    <li class="wrapper___optionItem logout" id="logout">
                         <img src="{{ asset('image/logout.svg') }}" alt="" class="wrapper__itemImage"> Wyloguj się
                     </li>
                 </ol>
@@ -40,7 +40,7 @@
     </header>
     <main class="main">
         <div class="main__leftBar">
-            <button class="main__add">Utwórz wydarzenie</button>
+            <button class="main__add" id="addEvent">Utwórz wydarzenie</button>
 
             <ol class="main__options">
                <li class="main__item"><img src="{{ asset('image/discussion.svg') }}" alt="" class="main__itemImage">Dyskusja</li>
