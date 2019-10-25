@@ -20,7 +20,7 @@
     <div class="bg"><img src="{{ asset('image/forumBg.svg') }}" alt="" class="bg__image"></div>
     <main class="wrapper">
 
-            <form action="" id="wrapper__form">
+            <form method="post" id="wrapper__form" enctype="multipart/form-data">
                 <div class="wrapper__logo"><img src="{{ asset('image/logo_dark.svg') }}" alt="" class="wrapper__logoImage"></div>
                 <div class="wrapper__colOne">
                 <input type="text" name="title" class="wrapper__input" placeholder="Tytuł wydarzenia"/>
@@ -38,15 +38,16 @@
                     <option value="pikieta" class="wrapper__option">Pikieta</option>
                     <option value="marsz" class="wrapper__option">Marsz</option>
                 </select>
-                <input type="text" name="startPlace" class="wrapper__input" placeholder="Miejsce rozpoczęcia"/>
-                <input type="text" name="finishPlace" class="wrapper__input" placeholder="Miejsce zakończenia"/>
+                <input type="text" name="location1" class="wrapper__input" placeholder="Lokalizacja startowa (pole 1, np. miasto)"/>
+                <input type="text" name="location2" class="wrapper__input" placeholder="Lokalizacja startowa (pole 2, np. ulica)"/>
+                <input type="text" name="endlocation" class="wrapper__input" placeholder="Miejsce zakończenia"/>
                 </div>
                 <div class="wrapper__colTwo">
                     <div class="wrapper__row">
                         <label for="logo" class="wrapper__clickArea"><span>Dodaj logo swojego protestu<br>Dopuszczalne formaty to JPG, JPEG i PNG</span></label>
-                        <input type="file" name="logo[]" id="logo" class="wrapper__file" accept=".jpg,.jpeg,.png">
+                        <input type="file" name="logo" id="logo" class="wrapper__file" accept=".jpg,.jpeg,.png">
                         <label for="bgImage" class="wrapper__clickArea --right"><span>Dodaj tło wydarzenia<br>Dopuszczalne formaty to JPG, JPEG i PNG</span></label>
-                        <input type="file" name="bgImage[]" id="bgImage" class="wrapper__file" accept=".jpg,.jpeg,.png">
+                        <input type="file" name="bgImage" id="bgImage" class="wrapper__file" accept=".jpg,.jpeg,.png">
                     </div>
                 <textarea name="description" id="" cols="30" rows="10" class="wrapper__textarea" placeholder="Opis wydarzenia"></textarea>
                 <div class="wrapper_map" id="mapid"></div>
