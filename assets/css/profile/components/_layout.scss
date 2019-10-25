@@ -1,0 +1,393 @@
+body{
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+.header{
+  .header__logo{
+    margin: 10px;
+    .header__logoImage{
+      width: 115px;
+      @media screen and (min-width: 1240px){
+        width: 140px;
+      }
+      @media screen and (min-width: 1920px){
+        width: 175px;
+      }
+    }
+    @media screen and (min-width: 1240px){
+      margin: 20px;
+    }
+
+  }
+}
+.main{
+  .main__colOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 35px auto;
+    .main__avatar{
+      .main__avatarImg{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        @media screen and (min-width: 960px){
+          width: 130px;
+          height: 130px;
+        }
+        @media screen and (min-width: 1240px){
+          width: 160px;
+          height: 160px;
+        }
+      }
+    }
+    .main__userData{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .main__userNick{
+        font-size: 26px;
+        font-weight: 500;
+        color: darken($lightGray, 45%);
+        margin: 5px auto 2.5px auto;
+        @media screen and (min-width: 1240px){
+          font-size: 28px;
+          margin: 7.5px auto 5px auto;
+        }
+      }
+      .main__userName{
+        font-size: 18px;
+        font-weight: 500;
+        color: darken($lightGray, 15%);
+        margin: 5px auto 2.5px auto;
+        letter-spacing: 0.7px;
+        @media screen and (min-width: 1240px){
+          font-size: 20px;
+          margin: 7.5px auto 5px auto;
+        }
+      }
+      .main__userCity{
+        font-size: 16px;
+        font-weight: 500;
+        color: darken($lightGray, 8%);
+        margin: 5px auto 2.5px auto;
+        letter-spacing: 0.7px;
+        @media screen and (min-width: 1240px){
+          font-size: 18px;
+          margin: 7.5px auto 5px auto;
+        }
+      }
+    }
+    @media screen and (min-width: 960px){
+      width: 220px;
+    }
+    @media screen and (min-width: 1240px){
+      width: 300px;
+    }
+  }
+  .main__colTwo {
+
+    .main__header {
+      margin-left: 20px;
+      color: $darkBlue;
+      font-weight: 500;
+      font-size: 24px;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 2.5px;
+        height: 100%;
+        background: $lightGreen;
+        position: absolute;
+        top: 0;
+        left: -10px;
+      }
+      @media screen and (min-width: 960px){
+        margin-left: 5px;
+      }
+      @media screen and (min-width: 1240px){
+        font-size: 26px;
+        margin: 15px 10px;
+      }
+      @media screen and (min-width: 1920px){
+        font-size: 30px;
+        margin: 15px 10px;
+      }
+    }
+
+    .main__events {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .main__event {
+        width: 90%;
+        padding: 5px;
+        border: 1px solid darken($lightGray, 2%);
+        border-radius: 5px;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+
+        .main__categoryLabel {
+          padding: 2.5px 5px 2.5px 20px;
+          color: darken($lightGray, 20%);
+          font-weight: 500;
+          background: $white;
+          position: absolute;
+          right: 10px;
+          top: -12.5px;
+          border-radius: 5px;
+
+          &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: calc(50% - 5px);
+            left: 5px;
+            border-radius: 50%;
+          }
+
+          &.ecoLabel {
+            border: 1px solid $eco;
+
+            &::before {
+              background: $eco;
+            }
+          }
+
+          &.socialLabel {
+            border: 1px solid $social;
+
+            &::before {
+              background: $social;
+            }
+          }
+
+          &.politcalLabel {
+            border: 1px solid $political;
+
+            &::before {
+              background: $political;
+            }
+          }
+
+          &.religiousLabel {
+            border: 1px solid $religious;
+
+            &::before {
+              background: $religious;
+            }
+          }
+
+          @media screen and (min-width: 1920px) {
+            font-size: 18px;
+          }
+        }
+
+        .main__logo {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 15px;
+
+          .main__logoImage {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            @media screen and (min-width: 1920px) {
+              width: 85px;
+              height: 85px;
+            }
+          }
+
+          @media screen and (min-width: 960px) {
+            width: auto;
+            margin-left: 5px;
+            margin-bottom: 50px;
+          }
+          @media screen and (min-width: 1240px) {
+            margin-bottom: 20px;
+            margin-left: 2.5%;
+          }
+
+        }
+
+        .main__text {
+          .main__title {
+            font-family: 'Dosis', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 2.5px;
+            @media screen and (min-width: 960px) {
+              text-align: left;
+              font-size: 20px;
+              margin-top: 20px;
+            }
+            @media screen and (min-width: 1050px) {
+              font-size: 26px;
+            }
+            @media screen and (min-width: 1240px) {
+              font-size: 30px;
+            }
+            @media screen and (min-width: 1920px) {
+              font-size: 40px;
+            }
+          }
+
+          .main__data {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 300;
+            color: darken($lightGray, 7.5%);
+            margin-top: 0;
+            padding-bottom: 35px;
+
+            .main__owner {
+              font-weight: 500;
+              color: darken($lightGray, 25%);
+              font-size: 18px;
+              margin-right: 3.5px;
+              @media screen and (min-width: 960px) {
+                font-size: 16px;
+              }
+              @media screen and (min-width: 1050px) {
+                font-size: 18px;
+              }
+            }
+
+            .main__date {
+              margin-left: 3.5px;
+            }
+
+            @media screen and (min-width: 960px) {
+              justify-content: flex-start;
+              font-size: 14px;
+              padding-bottom: 10px;
+            }
+            @media screen and (min-width: 1050px) {
+              font-size: 16px;
+            }
+          }
+
+        }
+
+        .main__respondUser {
+          position: absolute;
+          bottom: 2.5px;
+          left: 5px;
+
+          .main__respondUserImage {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            @media screen and (min-width: 1050px) {
+              width: 30px;
+              height: 30px;
+            }
+            @media screen and (min-width: 1920px) {
+              width: 45px;
+              height: 45px;
+            }
+          }
+
+          @media screen and (min-width: 960px) {
+            position: static;
+            width: 120px;
+          }
+          @media screen and (min-width: 1050px) {
+            width: 140px;
+          }
+          @media screen and (min-width: 1920px) {
+            width: 200px;
+          }
+
+        }
+
+        .main__commentCount {
+          position: absolute;
+          bottom: 2.5px;
+          right: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          .main__commentImage {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+            @media screen and (min-width: 1920px) {
+              width: 40px;
+              height: 40px;
+
+            }
+          }
+
+          .main__count {
+            font-size: 20;
+            color: darken($lightGray, 25%);
+            margin: 0;
+            @media screen and (min-width: 1920px) {
+              font-size: 28px;
+            }
+          }
+
+          @media screen and (min-width: 960px) {
+            position: static;
+            width: 40px;
+            margin-right: 10px;
+          }
+          @media screen and (min-width: 1920px) {
+            margin-right: 20px;
+            width: 80px;
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          width: 90%;
+        }
+        @media screen and (min-width: 960px) {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          width: 650px;
+        }
+        @media screen and (min-width: 1050px) {
+          width: 720px;
+        }
+        @media screen and (min-width: 1240px) {
+          width: 90%;
+        }
+        @media screen and (min-width: 1920px) {
+          width: 1500px;
+        }
+      }
+    }
+    @media screen and (min-width: 960px){
+      margin-right: 25px;
+      width: calc(100% - 240px);
+    }
+    @media screen and (min-width: 1240px){
+      width: calc(100% - 300px);
+    }
+  }
+  @media screen and (min-width: 960px) {
+      display: flex;
+      flex-direction: row;
+    justify-content: flex-start;
+  }
+}
