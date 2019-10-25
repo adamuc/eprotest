@@ -14,16 +14,27 @@
     <header class="wrapper">
         <section class="wrapper__topBar">
             <div class="wrapper__logo">
-                <img src="" alt="Logo" class="wrapper__logoImage">
+                <img src="{{ asset('image/logo_dark.svg') }}" alt="Logo" class="wrapper__logoImage">
             </div>
             <div class="wrapper__searchBar">
-                <input type="text" class="wrapper__search" placeholder="Wyszukaj">
+                <input type="text" class="wrapper__search" placeholder="Wyszukaj...">
             </div>
             {#<div class="wrapper__notification">#}
                 {#<img src="" alt="" class="wrapper__notificationImage">#}
             {#</div>#}
             <div class="wrapper__user">
                 <img src="{{ asset('image/avatar.jpg') }}" alt="" class="wrapper__userAvatar">
+                <ol class="wrapper__userOption">
+                    <li class="wrapper___optionItem">
+                        <img src="{{ asset('image/user.svg') }}" alt="" class="wrapper__itemImage"> Profil
+                    </li>
+                    <li class="wrapper___optionItem">
+                        <img src="{{ asset('image/settings.svg') }}" alt="" class="wrapper__itemImage"> Ustawienia
+                    </li>
+                    <li class="wrapper___optionItem logout">
+                        <img src="{{ asset('image/logout.svg') }}" alt="" class="wrapper__itemImage"> Wyloguj się
+                    </li>
+                </ol>
             </div>
         </section>
     </header>
@@ -45,9 +56,9 @@
         <div class="main__rightBar">
             <section class="main__events">
                 <div class="main__event">
-                    <span class="main__categoryLabel">Ekologiczny</span>
+                    <span class="main__categoryLabel ecoLabel">Ekologiczny</span>
                     <div class="main__logo">
-                        <img src="{{ asset('image/protest.png') }}" alt="" class="main__logoImage">
+                        <img src="{{ asset('image/protest.jpg') }}" alt="" class="main__logoImage">
                     </div>
                     <div class="main__text">
                         <p class="main__title">
@@ -56,10 +67,16 @@
                         <div class="main__data">
                             <p class="main__owner">Rafał</p> rozpoczął: <p class="main__date">18.10.2019</p>
                         </div>
-                        <div class="main__commentCount">
-                            <img src="" alt="" class="main__commentImage">
-                            <p class="main__count"></p>
-                        </div>
+                    </div>
+                    <div class="main__respondUser">
+                        <img src="{{ asset('image/avatar.jpg') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/avatar.jpg') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/avatar.jpg') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/end.jpg') }}" alt="" class="main__respondUserImage">
+                    </div>
+                    <div class="main__commentCount">
+                        <img src="{{ asset('image/comment.png') }}" alt="" class="main__commentImage">
+                        <p class="main__count">6</p>
                     </div>
                 </div>
             </section>

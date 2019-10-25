@@ -26,6 +26,9 @@ Encore
     .addEntry('index', './assets/js/index/main.js')
     .addEntry('auth', './assets/js/auth/main.js')
     .addEntry('forum', './assets/js/forum/main.js')
+    .addEntry('eventAdd', './assets/js/eventAdd/main.js')
+    .addEntry('event', './assets/js/event/main.js')
+    .addEntry('profile', './assets/js/profile/main.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
