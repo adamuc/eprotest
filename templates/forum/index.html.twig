@@ -8,7 +8,7 @@
     {{ encore_entry_script_tags('forum') }}
 {% endblock %}
 
-{% block title %}Eprotest{% endblock %}
+{% block title %}eProtest.pl - Razem zmieniajmy świat!{% endblock %}
 
 {% block body %}
     <header class="wrapper">
@@ -23,7 +23,7 @@
                 {#<img src="" alt="" class="wrapper__notificationImage">#}
             {#</div>#}
             <div class="wrapper__user">
-                <img src="{{ asset('image/avatar.jpg') }}" alt="" class="wrapper__userAvatar">
+                <img src="{{ asset('image/avatar.png') }}" alt="" class="wrapper__userAvatar">
                 <ol class="wrapper__userOption">
                     <li class="wrapper___optionItem" id="openProfile">
                         <img src="{{ asset('image/user.svg') }}" alt="" class="wrapper__itemImage"> Profil
@@ -43,7 +43,7 @@
             <button class="main__add" id="addEvent">Utwórz wydarzenie</button>
 
             <ol class="main__options">
-               <li class="main__item"><img src="{{ asset('image/discussion.png') }}" alt="" class="main__itemImage">Dyskusja</li>
+               <li class="main__item"><img src="{{ asset('image/discussion.svg') }}" alt="" class="main__itemImage">Dyskusja</li>
             </ol>
             <ol class="main__categories">
                 <li class="main__category all">Wszystkie</li>
@@ -58,24 +58,24 @@
                 <div class="main__event">
                     <span class="main__categoryLabel ecoLabel">Ekologiczny</span>
                     <div class="main__logo">
-                        <img src="{{ asset('image/protest.jpg') }}" alt="" class="main__logoImage">
+                        <img src="{{ asset('image/defaultLogo.png') }}" alt="" class="main__logoImage">
                     </div>
                     <div class="main__text">
                         <p class="main__title">
                             Dziura ozonowa zabija nas wszystkich!
                         </p>
                         <div class="main__data">
-                            <p class="main__owner">Rafał</p> rozpoczął: <p class="main__date">18.10.2019</p>
+                            <p class="main__owner">Nickname</p> rozpoczął: <p class="main__date">18.10.2019</p>
                         </div>
                     </div>
                     <div class="main__respondUser">
-                        <img src="{{ asset('image/avatar.jpg') }}" alt="" class="main__respondUserImage">
-                        <img src="{{ asset('image/avatar.jpg') }}" alt="" class="main__respondUserImage">
-                        <img src="{{ asset('image/avatar.jpg') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
                         <img src="{{ asset('image/end.jpg') }}" alt="" class="main__respondUserImage">
                     </div>
                     <div class="main__commentCount">
-                        <img src="{{ asset('image/comment.png') }}" alt="" class="main__commentImage">
+                        <img src="{{ asset('image/comment.svg') }}" alt="" class="main__commentImage">
                         <p class="main__count">6</p>
                     </div>
                 </div>

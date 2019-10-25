@@ -180,6 +180,9 @@
         width: 300px;
         font-size: 22px;
       }
+      &:hover{
+        cursor: pointer;
+      }
     }
     .main__options{
       list-style: none;
