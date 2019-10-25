@@ -1,8 +1,401 @@
 body{
   width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: 'Roboto', sans-serif;
+}
+.header{
+  width: 100%;
+  box-shadow: 0 0 10px rgba(158,158,158,0.1);
+  background: url("/image/bg.jpg") 50% 50%;
+  position: relative;
+  z-index: -2;
+  .header__logo{
+    padding: 10px;
+    z-index: 1;
+    .header__logoImage{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    @media screen and (min-width: 960px){
+      .header__logoImage{
+        width: 85px;
+        height: 85px;
+      }
+    }
+    @media screen and (min-width: 1920px){
+      padding: 25px;
+      .header__logoImage{
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  .header__overlay{
+    width: 100%;
+    height: 100%;
+    background: $darkBlue;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .header__eventBox{
+    z-index: 1;
+    width: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+    font-family: 'Dosis', sans-serif;
+    .header__title{
+      color: $white;
+      font-size: 24px;
+      padding: 10px 0;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      @media screen and (min-width: 960px){
+        font-size: 28px;
+      }
+      @media screen and (min-width: 1920px){
+        font-size: 34px;
+      }
+    }
+    .header__date{
+      color: $lightGreen;
+      font-size: 20px;
+      padding: 5px 0;
+      .smallerDate{
+        font-size: 18px;
+        @media screen and (min-width: 960px){
+          font-size: 22px;
+        }
+        @media screen and (min-width: 1920px){
+          font-size: 28px;
+        }
+      }
+      @media screen and (min-width: 960px){
+        font-size: 24px;
+      }
+      @media screen and (min-width: 1920px){
+        font-size: 30px;
+      }
+    }
+    .header__time{
+      padding: 5px 0;
+      display: flex;
+      flex-direction: row;
+      .white{
+        color: $white;
+        font-size: 18px;
+        @media screen and (min-width: 960px){
+          font-size: 22px;
+        }
+        @media screen and (min-width: 1920px){
+          font-size: 28px;
+        }
+      }
+      .time{
+        color: $lightGreen;
+        font-size: 20px;
+        position: relative;
+        display: block;
+        width: 32.5px;
+        margin-left: 5px;
+        .smallerTime{
+          font-size: 16px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          @media screen and (min-width: 960px){
+            font-size: 20px;
+          }
+          @media screen and (min-width: 1920px){
+            font-size: 26px;
+          }
+        }
+        @media screen and (min-width: 960px){
+          font-size: 24px;
+          width: 40px;
+        }
+        @media screen and (min-width: 1920px){
+          font-size: 30px;
+          width: 55px;
+        }
+      }
+    }
+    .header__category{
+      font-size: 18px;
+      padding: 5px 0;
+
+      &.eco{
+        color: $eco;
+      }
+      &.social{
+        color: $social;
+      }
+      &.political{
+        color: $political;
+      }
+      &.religious{
+        color: $religious;
+      }
+      @media screen and (min-width: 960px){
+        font-size: 22px;
+      }
+      @media screen and (min-width: 1920px){
+        font-size: 28px;
+      }
+    }
+    .header__type{
+      font-size: 18px;
+      padding: 5px 0;
+      color: $white;
+      @media screen and (min-width: 960px){
+        font-size: 22px;
+      }
+      @media screen and (min-width: 1920px){
+        font-size: 28px;
+      }
+    }
+    .header__start,
+    .header__end{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      font-size: 18px;
+      padding: 5px 0;
+      color: $white;
+      .header__place{
+        width: 15px;
+        margin-right: 10px;
+        @media screen and (min-width: 960px){
+          width: 22px;
+        }
+        @media screen and (min-width: 1920px){
+          width: 32px;
+        }
+      }
+      @media screen and (min-width: 960px){
+        font-size: 22px;
+      }
+      @media screen and (min-width: 1920px){
+        font-size: 28px;
+      }
+    }
+    @media screen and (min-width: 960px){
+      align-items: center;
+    }
+  }
+  .header__describe{
+    font-family: 'Roboto', sans-serif;
+    width: calc(100% - 10px);
+    background: $white;
+    margin-top: 60px;
+    color: darken($lightGray, 30%);
+    font-size: 15px;
+    line-height: 1.55;
+    padding: 10px 5px;
+    z-index: 2;
+    @media screen and (min-width: 960px){
+      font-size: 18px;
+      padding: 40px 35px;
+      width: calc(100% - 70px);
+    }
+    @media screen and (min-width: 1920px){
+      font-size: 22px;
+      padding: 60px 50px;
+      width: calc(100% - 100px);
+    }
+  }
+}
+.main{
+  .main__header{
+    margin-left: 20px;
+    color: $darkBlue;
+    font-weight: 300;
+    font-family: 'Dosis', sans-serif;
+    position: relative;
+    letter-spacing: 0.8px;
+    &::before{
+      content: '';
+      width: 2.5px;
+      height: 100%;
+      background: $lightGreen;
+      position: absolute;
+      top: 0;
+      left: -10px;
+    }
+    @media screen and (min-width: 960px){
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: 1240px){
+      margin-left: 40px;
+      font-size: 34px;
+      &::before{
+        left: -15px;
+      }
+    }
+  }
+  .main__commentSection{
+    .main__userComment{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: lighten($lightGray, 13.25%);
+      padding: 20px 0;
+      width: 96%;
+      margin: 20px auto;
+      .main__colOne {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .main__avatar{
+          .main__avatarLogo{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            @media screen and (min-width: 960px){
+              width: 55px;
+              height: 55px;
+            }
+            @media screen and (min-width: 1240px){
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+        .main__name{
+          text-decoration: none;
+          font-size: 18px;
+          color: darken($lightGray, 25%);
+          margin: 10px auto;
+          transition: all .2s ease-in;
+          @media screen and (min-width: 960px){
+            font-size: 20px;
+          }
+          @media screen and (min-width: 1240px){
+            font-size: 22px;
+          }
+          &:hover{
+            color: darken($lightGray, 45%);
+          }
+        }
+        @media screen and (min-width: 768px){
+          width: 180px;
+        }
+
+      }
+      .main__colTwo {
+        width: 100%;
+        #addForm{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          .main__textarea{
+            width: 90%;
+            height: 120px;
+            border: 0;
+            background: $white;
+            padding: 5px;
+            outline: none;
+            @media screen and (min-width: 768px){
+              margin-right: 20px;
+            }
+            @media screen and (min-width: 960px){
+              width: 95%;
+              height: 135px;
+            }
+            @media screen and (min-width: 1240px){
+              font-size: 18px;
+            }
+          }
+          .main__btn{
+            width: 200px;
+            padding: 5px;
+            background: $green;
+            margin-top: 10px;
+            color: $white;
+            font-weight: 400;
+            font-size: 18px;
+            border: 1.5px solid $green;
+            border-radius: 2.5px;
+            transition: all .3s ease-in;
+            @media screen and (min-width: 768px){
+              margin-right: 20px;
+              width: 150px;
+            }
+            @media screen and (min-width: 960px){
+              margin-top: 25px;
+            }
+            &:hover{
+              color: $green;
+              background: $white;
+              cursor: pointer;
+            }
+          }
+          @media screen and (min-width: 768px){
+            align-items: flex-end;
+          }
+        }
+        .main__commentData{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: center;
+          width: 100%;
+          .main__comment{
+            width: 90%;
+            margin-top: 10px;
+            margin-right: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: darken($lightGray, 45%);
+            @media screen and (min-width: 768px){
+              font-size: 16px;
+            }
+            @media screen and (min-width: 960px){
+              width: 95%;
+              line-height: 1.6;
+            }
+            @media screen and (min-width: 1920px){
+              font-size: 18px;
+            }
+          }
+          .main__data{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+            margin-top: 15px;
+            margin-right: 10px;
+            color: $lightGray;
+            font-size: 12px;
+            .main__time{
+              margin-left: 5px;
+
+            }
+            @media screen and (min-width: 768px){
+              font-size: 14px;
+            }
+            @media screen and (min-width: 1920px){
+              font-size: 16px;
+            }
+          }
+        }
+
+      }
+      @media screen and (min-width: 768px){
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+  }
 }

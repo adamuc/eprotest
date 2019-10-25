@@ -15,10 +15,54 @@
 {% endblock %}
 
 {% block title %}Eprotest{% endblock %}
+
+{% block body %}
     <header class="header">
+        <div class="header__logo"><img src="{{ asset('image/protest.jpg') }}" alt="" class="header__logoImage"></div>
+        <div class="header__overlay"></div>
         <div class="header__eventBox">
             <div class="header__title">Przykładowe wydarzenie</div>
+            <div class="header__date">20-<span class="smallerDate">08</span>-2020</div>
+            <div class="header__time"><span class="white">Godzina rozpoczęcia:</span> <span class="time">12<span class="smallerTime">00</span></span></div>
+            <div class="header__category eco">Ekologiczny</div>
+            <div class="header__type">Pikieta</div>
+            <div class="header__start"><img src="{{ asset('image/location.png') }}" alt="" class="header__place">Warszawa, ul. Jana Długosza</div>
+            <div class="header__end"><img src="{{ asset('image/location.png') }}" alt="" class="header__place">Warszawa, pałac prezydencki</div>
+        </div>
+        <div class="header__describe">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate augue varius, feugiat nunc sed, tristique justo. Maecenas dolor enim, maximus nec nibh at, venenatis imperdiet orci. Morbi sed sem vitae purus dignissim feugiat. Nunc ac magna nec orci fermentum aliquet a sed purus. Maecenas vestibulum tortor eu ex sagittis, a convallis urna sollicitudin. Ut ornare sagittis elit, sit amet posuere sem luctus in. Proin in dignissim tellus. Quisque consectetur lorem at maximus commodo.
         </div>
     </header>
-{% block body %}
+    <main class="main">
+        <h1 class="main__header">Komentarze</h1>
+        <section class="main__commentSection">
+            <div class="main__userComment">
+                <div class="main__colOne">
+                    <a href="" class="main__avatar"><img src="{{ asset('image/avatar.jpg') }}" alt="" class="main__avatarLogo"></a>
+                    <a href="" class="main__name">Rickardo198</a>
+                </div>
+                <div class="main__colTwo">
+                    <form action="" id="addForm">
+                        <textarea name="comment" id="" cols="30" rows="10" class="main__textarea" placeholder="Napisz komentarz..."></textarea>
+                        <input type="submit" class="main__btn" value="Dodaj">
+                    </form>
+                </div>
+            </div>
+            <div class="main__userComment">
+                <div class="main__colOne">
+                    <a href="" class="main__avatar"><img src="{{ asset('image/avatar.jpg') }}" alt="" class="main__avatarLogo"></a>
+                    <a href="" class="main__name">Rickardo198</a>
+                </div>
+                <div class="main__colTwo">
+                    <div class="main__commentData">
+                        <div class="main__comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate turpis libero, id luctus urna accumsan id. Nam ullamcorper, est id mollis sollicitudin, turpis ipsum ornare mauris, ut pulvinar elit lorem vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam condimentum, ex ut ultricies efficitur, mi eros condimentum leo, vel sagittis magna orci vitae ipsum. Quisque tellus orci, placerat quis cursus et, molestie ut lorem. Nulla facilisi. Nulla nibh velit, ultrices sed ligula quis, consequat placerat risus. Sed at bibendum neque. Nam et sem arcu. Aenean sit amet mollis elit, non molestie turpis. Quisque non nisi quis ex imperdiet dapibus ut a erat. In suscipit leo libero, vel congue velit porttitor vel. Quisque non libero maximus, laoreet odio a, suscipit quam. Maecenas ullamcorper orci purus, quis tincidunt risus volutpat feugiat.</div>
+                        <div class="main__data">
+                            <div class="main__time">12:20</div>
+                            <div class="main__date">20-02-2019</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 {% endblock %}
