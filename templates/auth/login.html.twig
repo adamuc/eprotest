@@ -19,7 +19,7 @@
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                 <input type="submit" class="box__btn" value="Zaloguj" name="btn">
                 {% if error %}
-                    <div class="box__error">{{ error.messageKey | replace({"Invalid credentials." : "Błędna nazwa użytkownika lub hasło!"}) }}</div>
+                    <div class="box__error">{{ error.messageKey | replace({"Invalid credentials." : "Błędna nazwa użytkownika lub hasło!", "Account not activated." : "Konto nieaktywne."}) }}</div>
                 {% endif %}
             </form>
         </div>
