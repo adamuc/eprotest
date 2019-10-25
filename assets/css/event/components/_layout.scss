@@ -9,6 +9,8 @@ body{
   position: relative;
   z-index: -2;
   .header__logo{
+    display: flex;
+    justify-content: flex-end;
     padding: 10px;
     z-index: 1;
     .header__logoImage{

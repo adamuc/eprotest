@@ -49,8 +49,32 @@ body{
           left: 0;
           .main__labelPic{
             width: 30px;
-
+            @media screen and (min-width: 1240px){
+              width: 60px;
+            }
           }
+          @media screen and (min-width: 1240px){
+            font-size: 16px;
+          }
+        }
+        @media screen and (min-width: 640px){
+          width: 120px;
+          height: 120px;
+          background-size: 120px 120px;
+        }
+        @media screen and (min-width: 768px){
+         width: 150px;
+         height: 150px;
+          background-size: 150px 150px;
+          margin-left: 15px;
+          margin-top: 20px;
+        }
+        @media screen and (min-width: 1240px){
+          width: 190px;
+          height: 190px;
+          background-size: 190px 190px;
+          margin-left: 25px;
+          margin-top: 30px;
         }
       }
       .main__userInputs{
@@ -70,6 +94,9 @@ body{
           &::placeholder{
             color: darken($lightGray, 15%);
           }
+          @media screen and (min-width: 1240px){
+            font-size: 20px;
+          }
         }
         .main__btn{
           width: 200px;
@@ -81,8 +108,21 @@ body{
           font-weight: 500;
           margin-top: 20px;
           border-radius: 2.5px;
+          @media screen and (min-width: 1240px){
+            font-size: 24px;
+            width: 250px;
+          }
+        }
+        @media screen and (min-width: 768px){
+          width: calc(100% - 190px);
         }
       }
+      @media screen and (min-width: 768px){
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+      }
     }
+
   }
 }
