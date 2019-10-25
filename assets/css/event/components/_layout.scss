@@ -9,6 +9,7 @@ body{
   position: relative;
   z-index: -2;
   .header__logo{
+    width: 95%;
     display: flex;
     justify-content: flex-end;
     padding: 10px;
@@ -201,6 +202,18 @@ body{
     line-height: 1.55;
     padding: 10px 5px;
     z-index: 2;
+    .header__map{
+      width: 95%;
+      height: 250px;
+      margin: 20px auto;
+      @media screen and (min-width: 960px){
+        height: 350px;
+      }
+      @media screen and (min-width: 1240px){
+        height: 400px;
+        width: 1000px;
+      }
+    }
     @media screen and (min-width: 960px){
       font-size: 18px;
       padding: 40px 35px;
@@ -210,6 +223,26 @@ body{
       font-size: 22px;
       padding: 60px 50px;
       width: calc(100% - 100px);
+    }
+  }
+}
+.header__websiteLogo{
+  z-index: 999999;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  .header__websiteLogoImg{
+    width: 60px;
+    @media screen and (min-width: 640px){
+      width: 80px;
+    }
+    @media screen and (min-width: 960px){
+      width: 100px;
+      margin: 5px;
+    }
+    @media screen and (min-width: 960px){
+      width: 140px;
+      margin: 5px;
     }
   }
 }

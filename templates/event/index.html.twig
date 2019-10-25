@@ -15,7 +15,7 @@
 
 {% block body %}
     <header class="header">
-        <div class="header__logo"><a href="" class="header__websiteLogo"></a><img src="{{ asset('image/protest.jpg') }}" alt="" class="header__logoImage"></div>
+        <div class="header__logo"><img src="{{ asset('image/protest.jpg') }}" alt="" class="header__logoImage"></div>
         <div class="header__overlay"></div>
         <div class="header__eventBox">
             <div class="header__title">Przykładowe wydarzenie</div>
@@ -28,9 +28,11 @@
         </div>
         <div class="header__describe">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate augue varius, feugiat nunc sed, tristique justo. Maecenas dolor enim, maximus nec nibh at, venenatis imperdiet orci. Morbi sed sem vitae purus dignissim feugiat. Nunc ac magna nec orci fermentum aliquet a sed purus. Maecenas vestibulum tortor eu ex sagittis, a convallis urna sollicitudin. Ut ornare sagittis elit, sit amet posuere sem luctus in. Proin in dignissim tellus. Quisque consectetur lorem at maximus commodo.
+            <div class="header__map" id="map" style="z-index: 9999999999;"></div>
         </div>
-        <div class="header__map" id="map" style="z-index: 9999999999; height: 100px; width: 100px;"></div>
+
     </header>
+    <a href="/index" class="header__websiteLogo"><img src="{{ asset('image/logo_white.svg') }}" alt="" class="header__websiteLogoImg"></a>
     <main class="main">
         <h1 class="main__header">Komentarze</h1>
         <section class="main__commentSection">
