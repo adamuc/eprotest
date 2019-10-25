@@ -8,15 +8,15 @@
     {{ encore_entry_script_tags('settings') }}
 {% endblock %}
 
-{% block title %}Eprotest{% endblock %}
+{% block title %}eProtest.pl - Razem zmieniajmy świat!{% endblock %}
 
 {% block body %}
     <main class="main">
 <h1 class="main__header">Ustawienia profilu</h1>
                 <div class="main__userData">
                     <form action="" id="main__userForm">
-                        <div class="main__userPic" style='background-image:url("/image/avatar.jpg");'>
-                            <label for="avatar" class="main__userPicLabel"><img src="{{ asset('image/camera.png') }}" alt="" class="main__labelPic"> Zmień zdjęcie</label>
+                        <div class="main__userPic" style='background-image:url("/image/avatar.png");'>
+                            <label for="avatar" class="main__userPicLabel"><img src="{{ asset('image/camera.svg') }}" alt="" class="main__labelPic"> Zmień zdjęcie</label>
                             <input type="file" name="avatar[]" id="avatar" class="main__userPicFile">
                         </div>
                         <div class="main__userInputs">

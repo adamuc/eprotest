@@ -31,11 +31,8 @@ body{
   position: relative;
   #wrapper__form{
     width: 100%;
-    .wrapper__logo{
+    .wrapper__link{
       padding: 15px;
-      .wrapper__logoImage{
-        width: 100px;
-      }
       @media screen and (min-width: 960px){
         padding: 5px;
         position: absolute;
@@ -55,6 +52,12 @@ body{
         left: 20px;
         .wrapper__logoImage{
           width: 165px;
+        }
+      }
+      .wrapper__logo{
+
+        .wrapper__logoImage{
+          width: 100px;
         }
       }
     }
@@ -203,6 +206,9 @@ body{
           margin-top: 15px;
           width: 280px;
           font-size: 22px;
+        }
+        &:hover{
+          cursor: pointer;
         }
       }
       @media screen and (min-width: 960px) {

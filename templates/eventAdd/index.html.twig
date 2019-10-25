@@ -14,14 +14,14 @@
             crossorigin=""></script>
 {% endblock %}
 
-{% block title %}Eprotest{% endblock %}
+{% block title %}eProtest.pl - Razem zmieniajmy świat!{% endblock %}
 
 {% block body %}
     <div class="bg"><img src="{{ asset('image/forumBg.svg') }}" alt="" class="bg__image"></div>
     <main class="wrapper">
 
             <form action="" id="wrapper__form">
-                <div class="wrapper__logo"><img src="{{ asset('image/logo_dark.svg') }}" alt="" class="wrapper__logoImage"></div>
+                <div class="wrapper__logo"><a href="/forum" class="wrapper__link"><img src="{{ asset('image/logo_dark.svg') }}" alt="" class="wrapper__logoImage"></a></div>
                 <div class="wrapper__colOne">
                 <input type="text" name="title" class="wrapper__input" placeholder="Tytuł wydarzenia"/>
                 <input type="date" name="date" class="wrapper__input" placeholder="Data wydarzenia"/>
