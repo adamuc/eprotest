@@ -21,7 +21,6 @@ $(document).ready(() => {
                 }
             },
             error(errResponse) {
-                console.log(errResponse);
                 if (errResponse.responseText === '100') {
                     $('.box__error').text('Konto o takiej nazwie użytkownika już istnieje!');
                 }
