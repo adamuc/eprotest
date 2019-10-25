@@ -81,7 +81,7 @@ class AuthController extends Controller
             $em->flush();
 
             $subject = "Aktywacja konta eProtest";
-            $msg = "<a href=https://www.eprotest.pl/activate#" . $confirmationCode . ">Kliknij tutaj, aby aktywować swoje konto w serwisie eProtest.</a>";
+            $msg = "<a href=https://www.eprotest.pl/activate?cc=" . $confirmationCode . ">Kliknij tutaj</a>, aby aktywowac swoje konto w serwisie eProtest.";
             $headers[] = "MIME-Version: 1.0";
             $headers[] = "Content-type: text/html; charset=iso-8859-1";
             $headers[] = "To: <" . $email . ">";
@@ -90,6 +90,30 @@ class AuthController extends Controller
             mail($email, $subject, $msg, implode("\r\n", $headers));
 
             return new Response(0, 200);
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @param UserRepository $userRepository
+     * @return Symfony\Component\HttpFoundation\Response
+     * @Route("/activate", methods={"GET"})
+     */
+    public function activateUser(Request $request, UserRepository $repository)
+    {
+        if ($request->request) {
+            $cc = trim(htmlspecialchars(strip_tags($request->query->get("cc"))));
+
+            $user = $repository->findOneByConfirmationCode($cc);
+            $em = $this->getDoctrine()->getManager();
+            if($user) {
+                $user->setConfirmationcode(null);
+                $em->persist($user);
+                $em->flush();
+                return new Response("Konto aktywowane pomyślnie! <a href=/login>Zaloguj się.</a>", 200);
+            }
+
+            return new Response("Niepoprawny kod aktywacyjny - sprawdź URL.", 400);
         }
     }
 

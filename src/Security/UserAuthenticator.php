@@ -71,6 +71,11 @@ class UserAuthenticator extends AbstractFormLoginAuthenticator
             throw new CustomUserMessageAuthenticationException('Invalid credentials.');
         }
 
+        if ($user->getConfirmationCode() !== NULL) {
+            // fail authentication with a custom error
+            throw new CustomUserMessageAuthenticationException('Account not activated.');
+        }
+
         return $user;
     }
 
