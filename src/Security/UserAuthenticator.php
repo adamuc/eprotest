@@ -71,6 +71,11 @@ class UserAuthenticator extends AbstractFormLoginAuthenticator
             throw new CustomUserMessageAuthenticationException('Invalid credentials.');
         }
 
+        if ($user->getConfirmationCode() !== NULL) {
+            // fail authentication with a custom error
+            throw new CustomUserMessageAuthenticationException('Account not activated.');
+        }
+
         return $user;
     }
 
@@ -87,7 +92,7 @@ class UserAuthenticator extends AbstractFormLoginAuthenticator
 
         // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
         //throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
-        return new RedirectResponse($this->urlGenerator->generate("index"));
+        return new RedirectResponse($this->urlGenerator->generate("forum"));
     }
 
     protected function getLoginUrl()

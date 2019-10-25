@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+    {{ encore_entry_link_tags('profile') }}
+{% endblock %}
+
+{% block js %}
+    {{ encore_entry_script_tags('profile') }}
+{% endblock %}
+
+{% block title %}eProtest.pl - Razem zmieniajmy świat!{% endblock %}
+
+{% block body %}
+<header class="header">
+    <div class="header__logo"><img src="{{ asset('image/logo_dark.svg') }}" alt="" class="header__logoImage"></div>
+</header>
+    <main class="main">
+        <div class="main__colOne">
+            <div class="main__avatar"><img src="{{ asset('image/avatar.png') }}" alt="" class="main__avatarImg"></div>
+            <div class="main__userData">
+                <p class="main__userNick">Nickname</p>
+                <p class="main__userName">Jan Kowalski</p>
+                <p class="main__userCity">Warszawa</p>
+            </div>
+        </div>
+        <div class="main__colTwo">
+            <h1 class="main__header">Twoje wydarzenia</h1>
+            <section class="main__events">
+                <div class="main__event">
+                    <span class="main__categoryLabel ecoLabel">Ekologiczny</span>
+                    <div class="main__logo">
+                        <img src="{{ asset('image/defaultLogo.png') }}" alt="" class="main__logoImage">
+                    </div>
+                    <div class="main__text">
+                        <p class="main__title">
+                            Dziura ozonowa zabija nas wszystkich!
+                        </p>
+                        <div class="main__data">
+                            <p class="main__owner">Nickname</p> rozpoczął: <p class="main__date">18.10.2019</p>
+                        </div>
+                    </div>
+                    <div class="main__respondUser">
+                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
+                        <img src="{{ asset('image/end.jpg') }}" alt="" class="main__respondUserImage">
+                    </div>
+                    <div class="main__commentCount">
+                        <img src="{{ asset('image/comment.svg') }}" alt="" class="main__commentImage">
+                        <p class="main__count">6</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+{% endblock %}

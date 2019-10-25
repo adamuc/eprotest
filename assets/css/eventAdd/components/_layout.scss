@@ -1,0 +1,239 @@
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+.bg{
+  width: 100vw;
+  min-height: 100vh;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .bg__image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  @media screen and (min-width: 960px){
+    width: calc(100vw - 15px);
+  }
+}
+.wrapper{
+  width: 95%;
+  height: 100%;
+  background: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+  #wrapper__form{
+    width: 100%;
+    .wrapper__link{
+      padding: 15px;
+      @media screen and (min-width: 960px){
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        .wrapper__logoImage{
+          width: 95px;
+        }
+      }
+      @media screen and (min-width: 960px){
+        .wrapper__logoImage{
+          width: 115px;
+        }
+      }
+      @media screen and (min-width: 1920px){
+        top: 10px;
+        left: 20px;
+        .wrapper__logoImage{
+          width: 165px;
+        }
+      }
+      .wrapper__logo{
+
+        .wrapper__logoImage{
+          width: 100px;
+        }
+      }
+    }
+    .wrapper__colOne{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .wrapper__input{
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid $lightGreen;
+        outline: 0;
+        padding: 10px 5px;
+        margin: 10px auto;
+        color: darken($lightGray, 10%);
+        font-size: 16px;
+        transition: all .3s ease-in;
+        &::placeholder{
+          color: darken($lightGray, 10%);;
+          font-size: 16px;
+          transition: all .3s ease-in;
+        }
+        &:focus{
+          &::placeholder{
+            color: darken($lightGray, 10%);
+          }
+        }
+        @media screen and (min-width: 1920px){
+          font-size: 18px;
+          &::placeholder{
+            font-size: 18px;
+          }
+        }
+      }
+      .wrapper__select{
+        width: 92%;
+        border: 0;
+        border-bottom: 1px solid $lightGreen;
+        outline: 0;
+        box-shadow: none;
+        -webkit-appearance: none;
+        padding: 10px 5px;
+        margin: 10px auto;
+        color: darken($lightGray, 10%);;
+        position: relative;
+        @media screen and (min-width: 1920px){
+          font-size: 18px;
+        }
+      }
+      @media screen and (min-width: 960px) {
+        width: 55%;
+        margin-top: 75px;
+      }
+      @media screen and (min-width: 1150px){
+        margin-top: 55px;
+      }
+    }
+    .wrapper__colTwo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .wrapper__row{
+        .wrapper__clickArea{
+          display: block;
+          width: 230px;
+          margin: 10px auto;
+          border: solid 0.7px $yellow;
+          border-radius: 5px;
+          text-align: center;
+          padding: 15px 0;
+          margin: 10px auto;
+          transition: all .3s ease;
+          span{
+            font-size: 15px;
+            color: $yellow;
+            margin: 5px auto;
+          }
+          &:hover{
+            cursor: pointer;
+            background: $yellow;
+            span{
+              color: $white;
+            }
+          }
+          @media screen and (min-width: 960px){
+            width: 200px;
+            span{
+              font-size: 13px;
+            }
+          }
+        }
+        .wrapper__file{
+          display: none;
+        }
+        @media screen and (min-width: 960px){
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          .wrapper__clickArea.--right{
+            margin-left: 10px;
+          }
+        }
+      }
+      .wrapper__textarea{
+        width: 90%;
+        border: 0;
+        border: 1px solid $lightGreen;
+        border-radius: 2.5px;
+        outline: 0;
+        padding: 10px 5px;
+        margin: 10px auto;
+        color: darken($lightGray, 10%);
+        transition: all .3s ease-in;
+        &::placeholder{
+          color: darken($lightGray, 10%);;
+          font-size: 16px;
+          transition: all .3s ease-in;
+        }
+        &:focus{
+          &::placeholder{
+            color: darken($lightGray, 10%);
+          }
+        }
+        @media screen and (min-width: 960px){
+          height: 100px;
+        }
+      }
+      #mapid{
+        height: 220px;
+        width: calc(90% + 5px);
+        margin-bottom: 7.5px;
+      }
+      .wrapper__submit{
+        width: 200px;
+        padding: 5px 10px;
+        background: $green;
+        border: 0;
+        color: $white;
+        font-size: 20px;
+        margin-bottom: 15px;
+        border-radius: 2.5px;
+        @media screen and (min-width: 1920px){
+          margin-top: 15px;
+          width: 280px;
+          font-size: 22px;
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      @media screen and (min-width: 960px) {
+        width: 45%;
+      }
+    }
+    @media screen and (min-width: 960px){
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+  @media screen and (min-width: 960px){
+    height: calc(100vh - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width: 1150px){
+    width: 1100px;
+  }
+  @media screen and (min-width: 1920px){
+    width: 1400px;
+    height: 760px;
+  }
+}
