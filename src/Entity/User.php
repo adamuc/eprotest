@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -52,6 +54,16 @@ class User implements UserInterface
      * @ORM\OneToOne(targetEntity="App\Entity\UserInfo", mappedBy="user", cascade={"persist", "remove"})
      */
     private $userInfo;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Protest", mappedBy="author")
+     */
+    private $protests;
+
+    public function __construct()
+    {
+        $this->protests = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -174,6 +186,37 @@ class User implements UserInterface
         // set the owning side of the relation if necessary
         if ($this !== $userInfo->getUser()) {
             $userInfo->setUser($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Protest[]
+     */
+    public function getProtests(): Collection
+    {
+        return $this->protests;
+    }
+
+    public function addProtest(Protest $protest): self
+    {
+        if (!$this->protests->contains($protest)) {
+            $this->protests[] = $protest;
+            $protest->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProtest(Protest $protest): self
+    {
+        if ($this->protests->contains($protest)) {
+            $this->protests->removeElement($protest);
+            // set the owning side to null (unless already changed)
+            if ($protest->getAuthor() === $this) {
+                $protest->setAuthor(null);
+            }
         }
 
         return $this;
