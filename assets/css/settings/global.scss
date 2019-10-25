@@ -1,0 +1,24 @@
+/* VENDOR - Default fall-backs and external files.
+========================================================================== */
+
+@import 'vendor/_normalize.scss';
+
+
+/* BASE - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+
+@import 'base/_variables.scss';
+@import 'base/_mixins.scss';
+@import 'base/_placeholders.scss';
+
+
+/* COMPONENTS - Structure and layout files.
+========================================================================== */
+
+@import 'components/_layout.scss';
+
+
+/* FONTS- Fonts using on website.
+========================================================================== */
+
+@import 'fonts/_fonts.scss';

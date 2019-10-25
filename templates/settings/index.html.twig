@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+    {{ encore_entry_link_tags('settings') }}
+{% endblock %}
+
+{% block js %}
+    {{ encore_entry_script_tags('settings') }}
+{% endblock %}
+
+{% block title %}Eprotest{% endblock %}
+
+{% block body %}
+    <main class="main">
+<h1 class="main__header">Ustawienia profilu</h1>
+                <div class="main__userData">
+                    <form action="" id="main__userForm">
+                        <div class="main__userPic" style='background-image:url("/image/avatar.jpg");'>
+                            <input type="file" name="avatar[]" class="main__userPicFile">
+                            <label for="avatar" class="main__userPicLabel"><img src="{{ asset('image/camera.png') }}" alt="" class="main__labelPic"> Zmień zdjęcie</label>
+                        </div>
+                        <div class="main__userInputs">
+                            <input type="text" name="nickname" class="main__input" value="Rickardo198">
+                            <input type="text" name="name" class="main__input" value="Rafał">
+                            <input type="text" name="sname" class="main__input" value="Kita">
+                            <input type="text" name="city" class="main__input" value="Babienica">
+                            <input type="password" name="oldpasword" class="main__input" placeholder="Stare hasło">
+                            <input type="password" name="newpassword" class="main__input" placeholder="Nowe hasło">
+                            <input type="password" name="rpassword" class="main__input" placeholder="Powtórz nowe hasło">
+                            <input type="submit" name="save" value="Zapisz" class="main__btn">
+                        </div>
+                    </form>
+                </div>
+    </main>
+{% endblock %}
