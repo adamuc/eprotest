@@ -1,6 +1,8 @@
 // CSS
 import '../../css/forum/global.scss';
+
 import $ from '../app';
+<<<<<<< HEAD
 $(document).ready(() =>{
     function menu() {
         let click = false;
@@ -46,3 +48,29 @@ $(document).ready(() =>{
     category();
     menu();
 });
+=======
+
+$(document).ready(() => {
+    $('.wrapper__user').hover(() => {
+        $('.wrapper__userOption').fadeIn(300);
+    }, () => {
+        $('.wrapper__userOption').fadeOut(300);
+    });
+
+    $('#addEvent').click(() => {
+        window.location.href = '/addevent';
+    });
+
+    $('#openProfile').click(() => {
+        window.location.href = '/profile';
+    });
+
+    $('#openSettings').click(() => {
+        window.location.href = '/settings';
+    });
+
+    $('#logout').click(() => {
+        window.location.href = '/logout';
+    });
+});
+>>>>>>> 480d4f9412c999cf3feb028a1db66665e8915488
