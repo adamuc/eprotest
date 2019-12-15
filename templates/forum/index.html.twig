@@ -11,75 +11,222 @@
 {% block title %}eProtest.pl - Razem zmieniajmy świat!{% endblock %}
 
 {% block body %}
-    <header class="wrapper">
-        <section class="wrapper__topBar">
-            <div class="wrapper__logo">
-                <img src="{{ asset('image/logo_dark.svg') }}" alt="Logo" class="wrapper__logoImage">
+    <div class="wrapper">
+        <nav class="navigation">
+            <div class="logo">
+                <img src="{{ asset('image/logo_white.svg') }}" alt="Logo" class="logo__image">
             </div>
-            <div class="wrapper__searchBar">
-                <input type="text" class="wrapper__search" placeholder="Wyszukaj...">
+            <div class="hamburger">
+                <img src="{{ asset('image/hamburgerIcon.svg') }}" alt="Hamburger menu" class="hamburger__image">
             </div>
-            {#<div class="wrapper__notification">#}
-                {#<img src="" alt="" class="wrapper__notificationImage">#}
-            {#</div>#}
-            <div class="wrapper__user">
-                <img src="{{ asset('image/avatar.png') }}" alt="" class="wrapper__userAvatar">
-                <ol class="wrapper__userOption">
-                    <li class="wrapper___optionItem">
-                        <img src="{{ asset('image/user.svg') }}" alt="" class="wrapper__itemImage"> Profil
-                    </li>
-                    <li class="wrapper___optionItem">
-                        <img src="{{ asset('image/settings.svg') }}" alt="" class="wrapper__itemImage"> Ustawienia
-                    </li>
-                    <li class="wrapper___optionItem logout">
-                        <img src="{{ asset('image/logout.svg') }}" alt="" class="wrapper__itemImage"> Wyloguj się
-                    </li>
-                </ol>
+            <ol class="navigation__menu">
+                <li class="navigation__item">
+                    <img src="{{ asset('image/settings.svg') }}" alt="Logo" class="navigation__itemImage">
+                    <p class="navigation__itemTxt">
+                        Jakaś opcja
+                    </p>
+                </li>
+                <li class="navigation__item">
+                <img src="{{ asset('image/settings.svg') }}" alt="Logo" class="navigation__itemImage">
+                <p class="navigation__itemTxt">
+                    Jakaś opcja
+                </p>
+                </li>
+                <li class="navigation__item">
+                    <img src="{{ asset('image/settings.svg') }}" alt="Logo" class="navigation__itemImage">
+                    <p class="navigation__itemTxt">
+                        Jakaś opcja
+                    </p>
+                </li>
+            </ol>
+            <div class="addons">
+                <div class="addons__option">?</div>
             </div>
-        </section>
-    </header>
-    <main class="main">
-        <div class="main__leftBar">
-            <button class="main__add">Utwórz wydarzenie</button>
+        </nav>
+        <main class="content">
+            <header class="header">
+                <input type="text" class="header__search" placeholder="Szukaj wydarzenia...">
+                <div class="userPanel">
+                    <div class="userPanel__messages">
+                        <img src="{{ asset('image/message.svg') }}" alt="Wiadomości" class="userPanel__messagesIcon" />
+                        <span class="userPanel__count">2</span>
+                    </div>
+                    <div class="userPanel__notifications">
+                        <img src="{{ asset('image/ring.svg') }}" alt="Powiadomienia" class="userPanel__notificationsIcon" />
+                    </div>
 
-            <ol class="main__options">
-               <li class="main__item"><img src="{{ asset('image/discussion.svg') }}" alt="" class="main__itemImage">Dyskusja</li>
-            </ol>
-            <ol class="main__categories">
-                <li class="main__category all">Wszystkie</li>
-                <li class="main__category eco">Ekologiczny</li>
-                <li class="main__category social">Społeczny</li>
-                <li class="main__category political">Polityczny</li>
-                <li class="main__category religious">Religijny</li>
-            </ol>
-        </div>
-        <div class="main__rightBar">
-            <section class="main__events">
-                <div class="main__event">
-                    <span class="main__categoryLabel ecoLabel">Ekologiczny</span>
-                    <div class="main__logo">
-                        <img src="{{ asset('image/defaultLogo.png') }}" alt="" class="main__logoImage">
-                    </div>
-                    <div class="main__text">
-                        <p class="main__title">
-                            Dziura ozonowa zabija nas wszystkich!
-                        </p>
-                        <div class="main__data">
-                            <p class="main__owner">Nickname</p> rozpoczął: <p class="main__date">18.10.2019</p>
-                        </div>
-                    </div>
-                    <div class="main__respondUser">
-                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
-                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
-                        <img src="{{ asset('image/avatar.png') }}" alt="" class="main__respondUserImage">
-                        <img src="{{ asset('image/end.jpg') }}" alt="" class="main__respondUserImage">
-                    </div>
-                    <div class="main__commentCount">
-                        <img src="{{ asset('image/comment.svg') }}" alt="" class="main__commentImage">
-                        <p class="main__count">6</p>
+                    <div class="userOption">
+                        <img src="{{ asset('image/avatar.png') }}" alt="Twój avatar" class="userOption__avatar" />
+                        <img src="{{ asset('image/arrow.svg') }}" alt="Strzałka" class="userOption__arrow arrow" />
+                        <ol class="userMenu">
+                            <li class="userMenu__item">
+                                <img src="{{ asset('image/settings.svg') }}" alt="" class="userMenu__itemImg">
+                                <p class="userMenu__itemTxt">Ustawienia</p>
+                            </li>
+                            <li class="userMenu__item">
+                                <img src="{{ asset('image/user.svg') }}" alt="" class="userMenu__itemImg">
+                                <p class="userMenu__itemTxt">Profil</p>
+                            </li>
+                            <li class="userMenu__item">
+                                <img src="{{ asset('image/logout.svg') }}" alt="" class="userMenu__itemImg">
+                                <p class="userMenu__itemTxt">Wyloguj&nbsp;się</p>
+                            </li>
+                        </ol>
                     </div>
                 </div>
+            </header>
+            <section class="loadBox">
+               <div class="loaderBox">
+                   <div class="loader">
+                   </div>
+               </div>
+                {#<div class="categories">#}
+                    {#<div class="event ecoEvent">#}
+                        {#<div class="event__icon">#}
+                            {#<img src="{{ asset('image/eco.svg') }}" alt="" class="event__iconImg">#}
+                        {#</div>#}
+                        {#<div class="event__title eco">#}
+                            {#Ekologiczny#}
+                        {#</div>#}
+                        {#<p class="event__desc">#}
+                            {#Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales posuere libero, a varius ligula                                  imperdiet non. Ut porta quam tellus, at tempor purus convallis non. Donec eleifend ornare urna, id                                  interdum massa ornare et. Proin sit amet enim eget quam tincidunt tincidunt. Aenean scelerisque quis ipsum                            sit amet lobortis.#}
+                        {#</p>#}
+                        {#<div class="stats">#}
+                            {#<div class="posts">#}
+                                {#<img src="{{ asset('image/pen.svg') }}" alt="" class="posts__img">#}
+                                {#<p class="posts__txt">Liczba wątków: <span class="posts__txt--count">298</span></p>#}
+                            {#</div>#}
+                            {#<div class="last">#}
+                                {#<img src="{{ asset('image/clock.svg') }}" alt="" class="last__img">#}
+                                {#<p class="last__txt">Ostatni post: <span class="last__txt--count">5</span> <span class="last__txt--smaller">godzin temu</span></p>#}
+                            {#</div>#}
+                        {#</div>#}
+
+                    {#</div>#}
+                    {#<div class="event socialEvent">#}
+                        {#<div class="event__icon">#}
+                            {#<img src="{{ asset('image/social.svg') }}" alt="" class="event__iconImg">#}
+                        {#</div>#}
+                        {#<div class="event__title social">#}
+                            {#Społeczny#}
+                        {#</div>#}
+                        {#<p class="event__desc">#}
+                            {#Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales posuere libero, a varius ligula                                  imperdiet non. Ut porta quam tellus, at tempor purus convallis non. Donec eleifend ornare urna, id                                  interdum massa ornare et. Proin sit amet enim eget quam tincidunt tincidunt. Aenean scelerisque quis ipsum                            sit amet lobortis.#}
+                        {#</p>#}
+                        {#<div class="stats">#}
+                            {#<div class="posts">#}
+                                {#<img src="{{ asset('image/pen.svg') }}" alt="" class="posts__img">#}
+                                {#<p class="posts__txt">Liczba wątków: <span class="posts__txt--count">298</span></p>#}
+                            {#</div>#}
+                            {#<div class="last">#}
+                                {#<img src="{{ asset('image/clock.svg') }}" alt="" class="last__img">#}
+                                {#<p class="last__txt">Ostatni post: <span class="last__txt--count">5</span> <span class="last__txt--smaller">godzin temu</span></p>#}
+                            {#</div>#}
+                        {#</div>#}
+
+                    {#</div>#}
+                    {#<div class="event politicalEvent">#}
+                        {#<div class="event__icon">#}
+                            {#<img src="{{ asset('image/political.svg') }}" alt="" class="event__iconImg">#}
+                        {#</div>#}
+                        {#<div class="event__title political">#}
+                            {#Polityczny#}
+                        {#</div>#}
+                        {#<p class="event__desc">#}
+                            {#Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales posuere libero, a varius ligula                                  imperdiet non. Ut porta quam tellus, at tempor purus convallis non. Donec eleifend ornare urna, id                                  interdum massa ornare et. Proin sit amet enim eget quam tincidunt tincidunt. Aenean scelerisque quis ipsum                            sit amet lobortis.#}
+                        {#</p>#}
+                        {#<div class="stats">#}
+                            {#<div class="posts">#}
+                                {#<img src="{{ asset('image/pen.svg') }}" alt="" class="posts__img">#}
+                                {#<p class="posts__txt">Liczba wątków: <span class="posts__txt--count">298</span></p>#}
+                            {#</div>#}
+                            {#<div class="last">#}
+                                {#<img src="{{ asset('image/clock.svg') }}" alt="" class="last__img">#}
+                                {#<p class="last__txt">Ostatni post: <span class="last__txt--count">5</span> <span class="last__txt--smaller">godzin temu</span></p>#}
+                            {#</div>#}
+                        {#</div>#}
+
+                    {#</div>#}
+                    {#<div class="event religiousEvent">#}
+                        {#<div class="event__icon">#}
+                            {#<img src="{{ asset('image/religious.svg') }}" alt="" class="event__iconImg">#}
+                        {#</div>#}
+                        {#<div class="event__title religious">#}
+                            {#Religijny#}
+                        {#</div>#}
+                        {#<p class="event__desc">#}
+                            {#Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales posuere libero, a varius ligula                                  imperdiet non. Ut porta quam tellus, at tempor purus convallis non. Donec eleifend ornare urna, id                                  interdum massa ornare et. Proin sit amet enim eget quam tincidunt tincidunt. Aenean scelerisque quis ipsum                            sit amet lobortis.#}
+                        {#</p>#}
+                        {#<div class="stats">#}
+                            {#<div class="posts">#}
+                                {#<img src="{{ asset('image/pen.svg') }}" alt="" class="posts__img">#}
+                                {#<p class="posts__txt">Liczba wątków: <span class="posts__txt--count">298</span></p>#}
+                            {#</div>#}
+                            {#<div class="last">#}
+                                {#<img src="{{ asset('image/clock.svg') }}" alt="" class="last__img">#}
+                                {#<p class="last__txt">Ostatni post: <span class="last__txt--count">5</span> <span class="last__txt--smaller">godzin temu</span></p>#}
+                            {#</div>#}
+                        {#</div>#}
+
+                    {#</div>#}
+                {#</div>#}
+                {# <div class="eventsBox">
+                    <div class="controlPanel">
+                        <button class="controlPanel__button">
+                            Utwórz wydarzenie
+                        </button>
+                    </div>
+                    <div class="events">
+                        <div class="sort">
+                            <select name="" id="" class="sort__select">
+                                <option value="1" class="sort__option">Od najnowszego</option>
+                                <option value="2" class="sort__option">Od najstarszego</option>
+                                <option value="3" class="sort__option">Liczba uczestników</option>
+                            </select>
+                        </div>
+                        <div class="eventsWrapper">
+                            <div class="eventCard">
+                                <div class="eventCard__bg">
+                                    <img src="{{ asset('image/defaultBg.png') }}" alt="" class="eventCard__bgImage">
+                                </div>
+                                <div class="content">
+                                    {# <div class="content__option">...</div> #}
+                                    <div class="user">
+                                        <img src="{{ asset('image/avatar.png') }}" alt="" class="user__avatar">
+                                        <div class="pinned">
+                                            <img src="{{ asset('image/pin.svg') }}" alt="" class="pinnedImg">
+                                        </div>
+                                    </div>
+                                    <h2 class="eventCard__header">
+                                        Przykładowy tytuł wydarzenia
+                                    </h2>
+                                    <h3 class="eventCard__created">
+                                        Utworzono: 5 godzin temu
+                                    </h3>
+                                    <p class="eventCard__desc">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui nunc, mattis eu lobortis et, consequat non augue. Curabitur eget mollis nunc, id mattis massa. Donec vel faucibus lectus, non ullamcorper urna. Cras ut lacus sodales massa lobortis blandit. Aliquam velit ipsum, commodo sed accumsan id, tristique vel urna. Sed mauris augue, condimentum eu lectus id, posuere bibendum odio. Phasellus sit amet purus eget neque consequat bibendum.
+                                    </p>
+                                    <div class="eventFooter">
+                                        <div class="member">
+                                            <img src="{{ asset('image/users.svg') }}" alt="" class="member__icon">
+                                            <p class="member__txt">600 uczestników</p>
+                                        </div>
+                                        <div class="location">
+                                            <img src="{{ asset('image/location_dark.svg') }}" alt="" class="location__icon">
+                                            <p class="location__txt">Warszawa</p>
+                                        </div>
+                                        <div class="posts">
+                                            <img src="{{ asset('image/comment.svg') }}" alt="" class="posts__icon">
+                                            <p class="posts__txt">20 wątków</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> #}
+                
             </section>
-        </div>
-    </main>
+        </main>
+    </div>
 {% endblock %}
