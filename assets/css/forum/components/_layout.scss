@@ -1,563 +1,834 @@
+/* Categories */
+.eco{
+  color: $eco;
+}
+.social{
+  color: $social;
+}
+.political{
+  color: $political;
+}
+.religious{
+  color: $religious;
+}
 
 .wrapper{
-  .wrapper__topBar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    .wrapper__logo{
-      margin: 5px 10px;
-      .wrapper__logoImage{
-        width: 80px;
-      }
-      @media screen and (min-width: 768px){
-        margin: 15px 35px;
-        .wrapper__logoImage{
-          width: 120px;
+  .navigation{
+    background: $darkBlue;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    .logo{
+      &__image{
+        width: 85px;
+        padding: 15px;
+        @media screen and (min-width: 960px){
+          width: 105px;
         }
       }
-      @media screen and (min-width: 1920px){
-        margin: 15px 45px;
-        .wrapper__logoImage{
-          width: 200px;
-        }
-      }
-    }
-    .wrapper__searchBar{
-      .wrapper__search{
-        width: 85%;
-        border: 0;
-        background: $white;
-        border-bottom: 1px solid $lightGreen;
-        padding: 5px;
-        border-radius: 3.5px;
-        outline: 0;
-      }
-      @media screen and (min-width: 768px){
-        width: 100%;
-        margin-top: 25px;
-        .wrapper__search{
-          width: 95%;
-        }
-      }
-      @media screen and (min-width: 1920px){
-        .wrapper__search{
-          font-size: 22px;
-          padding: 10px;
-          width: 1300px;
-        }
-      }
-    }
-    .wrapper__user{
-      width: 40px;
-      height: 40px;
-      margin: 5px 10px;
-      position: relative;
-      .wrapper__userAvatar{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-      }
-      .wrapper__userOption{
-        display: none;
-        background: #3A414A;
-        position: absolute;
-        bottom: -160px;
-        right: 0;
-        list-style: none;
-        font-family: 'Roboto', sans-serif;
-        width: 150px;
-        padding: 0;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        z-index: 8128;
-        .wrapper___optionItem{
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          margin: 10px auto;
-          color: $white;
-          font-size: 13px;
-          border-bottom: 1px solid darken(#3A414A, 10%);
-          padding: 5px 10px;
-          transition: all .2s ease-in;
-          .wrapper__itemImage{
-            width: 20px;
-            margin-right: 10px;
-
-          }
-          &:last-child{
-            border-bottom: none;
-          }
-          &:hover{
-            color: $lightGray;
-            cursor: pointer;
-          }
-        }
-        &::before{
-          content: "";
-          width: 0;
-          height: 0;
-          display: block;
-          border-left: 12px solid transparent;
-          border-right: 12px solid transparent;
-          border-bottom: 12px solid #3A414A;
-          position: absolute;
-          top: -8px;
-          right: 0;
-        }
-        @media screen and (min-width: 768px){
-          bottom: -170px;
-        }
-        @media screen and (min-width: 1240px){
-          bottom: -185px;
-          width: 220px;
-          .wrapper___optionItem{
-            font-size: 14px;
-            .wrapper__itemImage{
-              width: 25px;
-            }
-          }
-        }
-        @media screen and (min-width: 1240px){
-          bottom: -210px;
-          width: 250px;
-          .wrapper___optionItem{
-            font-size: 16px;
-            .wrapper__itemImage{
-              width: 28px;
-            }
-          }
-        }
-      }
-      @media screen and (min-width: 768px){
-        margin-top: 10px;
-        margin-right: 30px;
-        .wrapper__userAvatar{
-          width: 55px;
-          height: 55px;
-        }
-      }
-      @media screen and (min-width: 1920px){
-        margin-right: 80px;
-        .wrapper__userAvatar{
-          width: 70px;
-          height: 70px;
-        }
-      }
-    }
-  }
-}
-.main {
-  .main__leftBar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-    .main__add {
-
-        width: 230px;
-        border-radius: 2.5px;
-        color: $white;
-        text-decoration: none;
-        font-size: 20px;
-        font-family: 'Roboto', sans-serif;
-        padding: 7.5px 5px;
-        background: $green;
-        text-align: center;
-        margin-top: 15px;
-      border: 0;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1px);
-      @media screen and (min-width: 768px){
-        width: 200px;
-      }
-      @media screen and (min-width: 1050px){
-        width: 240px;
-      }
-      @media screen and (min-width: 1920px){
-        width: 300px;
-        font-size: 22px;
-      }
-      &:hover{
-        cursor: pointer;
-      }
-    }
-    .main__options{
-      list-style: none;
-      padding: 0;
-      margin-top: 30px;
-      padding-bottom: 50px;
-      width: 80%;
-      border-bottom: 1px solid $lightGray;
-      .main__item{
+      @media screen and (min-width: 960px){
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Roboto', sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        .main__itemImage{
-          width: 20px;
-          height: 20px;
-          margin-right: 15px;
-          @media screen and (min-width: 1920px){
-            width: 40px;
-            height: 40px;
-          }
-        }
-        @media screen and (min-width: 1920px){
-          font-size: 22px;
-        }
       }
-      @media screen and (min-width: 768px){
-        width: 100%;
-        .main__item{
-          justify-content: flex-start;
-          align-items: center;
-          padding-left: 15px;
-        }
+    }
+    .hamburger{
+      width: 40px;
+      position: absolute;
+      top: 35px;
+      right: 15px;
+      &__image{
+        width: 40px;
       }
+      @media screen and (min-width: 960px){
+        display: none;
+      }
+    }
+    &__menu{
+      list-style: none;
+      padding: 0;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      height: 0;
+      width: 100%;
+      background: $darkBlue;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: -2;
+      transition: all .3s ease-in;
+      &--active{
+        z-index: 210;
+        height: 250px;
+        bottom: -285px;
+        padding: 15px 0;
+      }
+      @media screen and (min-width: 960px){
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
 
-    }
-    .main__categories{
-      list-style-type: none;
-      .main__category{
-        padding: 10px 5px;
-        font-size: 18px;
-        font-weight: 500;
-        position: relative;
-        font-family: 'Roboto', sans-serif;
-        transition: all .2s ease-in;
-        &::before{
-          content: "";
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          position: absolute;
-          top: calc(50% - 10px);
-          left: -25px;
-          @media screen and (min-width: 1920px){
-            width: 20px;
-            height: 20px;
-          }
-        }
-        &.all{
-          &::before{
-            background: $all;
-          }
-          &:hover{
-            color: $all;
-          }
-        }
-        &.eco{
-          &::before{
-            background: $eco;
-          }
-          &:hover{
-            color: $eco;
-          }
-        }
-        &.social{
-          &::before{
-            background: $social;
-          }
-          &:hover{
-            color: $social;
-          }
-        }
-        &.political{
-          &::before{
-            background: $political;
-          }
-          &:hover{
-            color: $political;
-          }
-        }
-        &.religious{
-          &::before{
-            background: $religious;
-          }
-          &:hover{
-            color: $religious;
-          }
-        }
-        &:hover{
-          cursor: pointer;
-        }
-        @media screen and (min-width: 1920px){
-          font-size: 24px;
-        }
-      }
-      @media screen and (min-width: 768px){
-        padding-left: 35px;
-      }
-      @media screen and (min-width: 1920px){
-        padding-left: 50px;
       }
     }
-    @media screen and (min-width: 768px){
-      margin-left: 25px;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-    @media screen and (min-width: 1050px){
-      width: 250px;
-    }
-    @media screen and (min-width: 1240px){
-      width: 25%;
-    }
-    @media screen and (min-width: 1920px){
-      margin-left: 55px;
-    }
-  }
-  .main__rightBar{
-    margin-top: 30px;
-    .main__events{
+    &__item{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      .main__event{
-        width: 90%;
+      padding: 10px 5px;
+      transition: all .3s ease-in;
+      @media screen and (min-width: 960px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+      }
+      &:hover{
+        background: darken($lightGreen, 7.5%);
+      }
+    }
+    &__itemImage{
+      width: 50px;
+      @media screen and (min-width: 960px){
+        margin-top: 20px;
+      }
+    }
+    &__itemTxt{
+      color: $white;
+      font-size: 20px;
+      margin-left: 15px;
+      @media screen and (min-width: 960px){
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+    }
+    .addons{
+      display: none;
+      &__option{
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border-radius: 50%;
+        font-size: 25px;
+        color: $darkBlue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media screen and (min-width: 960px){
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 15px;
+        left: calc(50% - 20px);
+      }
+    }
+    @media screen and (min-width: 960px){
+      min-height: 100vh;
+      max-height: 100%;
+    }
+  }
+  .content{
+    width: 100%;
+    .header{
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 10;
+      font-family: 'Roboto', sans-serif;
+      &__search{
+        margin-left: 10px;
+        width: 45%;
+        border: 1px solid darken($lightGray, 7.5%);
         padding: 5px;
-        border: 1px solid darken($lightGray, 2%);
-        border-radius: 5px;
-        position: relative;
-        font-family: 'Roboto', sans-serif;
-        .main__categoryLabel{
-          padding: 2.5px 5px 2.5px 20px;
-          color: darken($lightGray, 20%);
-          font-weight: 500;
-          background: $white;
-          position: absolute;
-          right: 10px;
-          top: -12.5px;
-          border-radius: 5px;
-          &::before{
-            content: '';
-            width: 10px;
-            height: 10px;
-            position: absolute;
-            top: calc(50% - 5px);
-            left: 5px;
-            border-radius: 50%;
-          }
-          &.ecoLabel{
-            border: 1px solid $eco;
-            &::before{
-              background: $eco;
-            }
-          }
-          &.socialLabel{
-            border: 1px solid $social;
-            &::before{
-              background: $social;
-            }
-          }
-          &.politcalLabel{
-            border: 1px solid $political;
-            &::before{
-              background: $political;
-            }
-          }
-          &.religiousLabel{
-            border: 1px solid $religious;
-            &::before{
-              background: $religious;
-            }
-          }
-          @media screen and (min-width: 1920px){
-            font-size: 18px;
+        border-radius: 30px;
+        color: $lightGray;
+        font-size: 14px;
+        outline: 0;
+        font-weight: 300;
+        @media screen and (min-width: 960px){
+          width: 55%;
+          margin-left: 40px;
+          padding: 10px;
+        }
+      }
+      .userPanel{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &__notifications{
+          margin-right: 15px;
+          position: relative;
+          @media screen and (min-width: 960px){
+            margin-right: 35px;
           }
         }
-        .main__logo{
-          width: 100%;
+        &__messages{
+          margin-right: 10px;
+          position: relative;
+          @media screen and (min-width: 960px){
+            margin-right: 15px;
+          }
+        }
+        &__notificationsIcon, &__messagesIcon{
+          width: 20px;
+          height: 20px;
+          @media screen and (min-width: 960px){
+            width: 25px;
+            height: 25px;
+          }
+        }
+        &__count{
+          width: 15px;
+          height: 15px;
+          background: darken($lightGreen, 7.5%);
+          border-radius: 50%;
+          position: absolute;
+          bottom: -3.5px;
+          right: -7.5px;
+          color: $white;
+          font-weight: 400;
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-top: 15px;
-          .main__logoImage{
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            @media screen and (min-width: 1920px){
-              width: 85px;
-              height: 85px;
-            }
-          }
+          font-size: 12px;
+          padding: 1.5px;
           @media screen and (min-width: 960px){
-            width: auto;
-            margin-left: 5px;
-            margin-bottom: 50px;
+            width: 20px;
+            height: 20px;
+            bottom: -8.5px;
+            right: -12.5px;
+            font-size: 14px;
           }
-          @media screen and (min-width: 1240px){
-            margin-bottom: 20px;
-            margin-left: 2.5%;
-          }
-
         }
-        .main__text{
-          .main__title{
-            font-family: 'Dosis', sans-serif;
-            font-weight: 600;
-            letter-spacing: 0.8px;
-            font-size: 24px;
-            text-align: center;
-            margin-top: 10px;
-            margin-bottom: 2.5px;
+        .userOption{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          position: relative;
+          &__avatar{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             @media screen and (min-width: 960px){
-              text-align: left;
-              font-size: 20px;
-              margin-top: 20px;
-            }
-            @media screen and (min-width: 1050px){
-            font-size: 26px;
-          }
-            @media screen and (min-width: 1240px){
-              font-size: 30px;
-            }
-            @media screen and (min-width: 1920px){
-              font-size: 40px;
+              width: 50px;
+              height: 50px;
             }
           }
-          .main__data{
+          &__arrow{
+            width: 15px;
+            height: 15px;
+            margin-right: 7.5px;
+            margin-left: 7.5px;
+            &:hover{
+              cursor: pointer;
+            }
+            @media screen and (min-width: 960px){
+              width: 20px;
+              height: 20px;
+            }
+          }
+          .userMenu{
+            display: flex;
+            background: $darkBlue;
+            position: absolute;
+            bottom: -210px;
+            right: 5px;
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 5px 0;
+            &__item{
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+              padding: 5px 15px;
+              width: calc(100% - 30px;);
+              border-bottom: 1px solid rgba(255,255,255, 0.6);
+              transition: all .3s ease-in;
+              &:last-child{
+                border-bottom: 0;
+              }
+              &:hover{
+                background: darken($lightGreen, 7.5%);
+                cursor: pointer;
+              }
+            }
+            &__itemImg{
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
+              @media screen and (min-width: 960px){
+                width: 30px;
+                height: 30px;
+              }
+            }
+            &__itemTxt{
+              color: $white;
+              font-size: 14px;
+              width: 100%;
+              @media screen and (min-width: 960px){
+                font-size: 16px;
+              }
+            }
+            &::before{
+              content: "";
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              border-bottom: 10px solid $darkBlue;
+              position: absolute;
+              top: -10px;
+              right: 0;
+            }
+          }
+        }
+        @media screen and (min-width: 960px){
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 960px){
+    display: flex;
+    flex-direction: row;
+  }
+  .loadBox {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    position: relative;
+    .loaderBox{
+      width: 100%;
+      height: 100%;
+      background: $white;
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 30;
+      .loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: $yellow;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          right: 5px;
+          bottom: 5px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-top-color: $lightGreen;
+          -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          right: 15px;
+          bottom: 15px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-top-color: $green;
+          -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
+        }
+      }
+      @-webkit-keyframes spin {
+        0%   {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        0%   {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    .categories{
+      height: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      .event{
+        width: 300px;
+        margin: 20px 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: all .3s ease-in;
+        &__icon{
+          width: 90px;
+          height: 90px;
+          background: $darkBlue;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 35px;
+          @media screen and (min-width: 1920px){
+            width: 105px;
+            height: 105px;
+            margin-top: 45px;
+          }
+        }
+        &__iconImg{
+          width: 55px;
+          height: 55px;
+          @media screen and (min-width: 1920px){
+            width: 70px;
+            height: 70px;
+          }
+        }
+        &__title{
+          margin: 20px 0;
+          font-size: 34px;
+          font-weight: 500;
+          letter-spacing: 0.8px;
+          @media screen and (min-width: 1920px){
+            font-size: 36px;
+          }
+        }
+        &__desc{
+          width: 88%;
+          margin: 0 auto 25px auto;
+          font-size: 16px;
+          font-weight: 300;
+          color: $gray;
+          text-align: justify;
+          @media screen and (min-width: 1920px){
+            width: 80%;
+            line-height: 1.8;
+            font-size: 18px;
+          }
+        }
+        .stats{
+          .posts{
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            font-size: 16px;
-            font-weight: 300;
-            color: darken($lightGray, 7.5%);
-            margin-top: 0;
-            padding-bottom: 35px;
-            .main__owner{
-              font-weight: 500;
-              color: darken($lightGray, 25%);
+            margin: 10px auto;
+            &__img{
+              width: 25px;
+              height: 25px;
+              margin-right: 10px;
+            }
+            &__txt{
+              color: darken($gray, 10%);
               font-size: 18px;
-              margin-right: 3.5px;
-              @media screen and (min-width: 960px){
-                font-size: 16px;
+              font-weight: 300;
+              margin: 0;
+              &--count{
+                color: $lightGreen;
+                font-weight: 500;
+                font-size: 22px;
+                margin-left: 5px;
               }
-              @media screen and (min-width: 1050px){
-                font-size: 18px;
+            }
+          }
+          .last{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto 30px auto;
+            &__img{
+              width: 25px;
+              height: 25px;
+              margin-right: 10px;
+            }
+            &__txt{
+              color: darken($gray, 10%);
+              font-size: 18px;
+              font-weight: 300;
+              margin: 0;
+              &--count{
+                color: $lightGreen;
+                font-weight: 500;
+                font-size: 22px;
+                margin-left: 5px;
+              }
+              &--smaller{
+                font-size: 14px;
               }
             }
-            .main__date{
-              margin-left: 3.5px;
-            }
-            @media screen and (min-width: 960px){
-              justify-content: flex-start;
-              font-size: 14px;
-              padding-bottom: 10px;
-            }
-            @media screen and (min-width: 1050px){
-              font-size: 16px;
+          }
+        }
+        &.ecoEvent{
+          &::before{
+            content: "Przejdź dalej";
+            color: $eco;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.6px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0;
+            transition: all .25s ease-in;
+          }
+          &::after{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 20px;
+            background: $eco;
+            position: absolute;
+            top: 17.5px;
+            right: 12.5px;
+          }
+          &:hover{
+            cursor: pointer;
+            &::before{
+              opacity: 1;
             }
           }
-
+        }
+        &.socialEvent{
+          &::before{
+            content: "Przejdź dalej";
+            color: $social;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.6px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0;
+            transition: all .25s ease-in;
+          }
+          &::after{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 20px;
+            background: $social;
+            position: absolute;
+            top: 17.5px;
+            right: 12.5px;
+          }
+          &:hover{
+            cursor: pointer;
+            &::before{
+              opacity: 1;
+            }
+          }
+        }
+        &.politicalEvent{
+          &::before{
+            content: "Przejdź dalej";
+            color: $political;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.6px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0;
+            transition: all .25s ease-in;
+          }
+          &::after{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 20px;
+            background: $political;
+            position: absolute;
+            top: 17.5px;
+            right: 12.5px;
+          }
+          &:hover{
+            cursor: pointer;
+            &::before{
+              opacity: 1;
+            }
+          }
+        }
+        &.religiousEvent{
+          &::before{
+            content: "Przejdź dalej";
+            color: $religious;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.6px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0;
+            transition: all .25s ease-in;
+          }
+          &::after{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 20px;
+            background: $religious;
+            position: absolute;
+            top: 17.5px;
+            right: 12.5px;
+          }
+          &:hover{
+            cursor: pointer;
+            &::before{
+              opacity: 1;
+            }
+          }
         }
 
-        .main__respondUser{
-          position: absolute;
-          bottom: 2.5px;
-          left: 5px;
-          .main__respondUserImage{
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            @media screen and (min-width: 1050px){
-              width: 30px;
-              height: 30px;
-            }
-            @media screen and (min-width: 1920px){
-              width: 45px;
-              height: 45px;
-            }
-          }
-          @media screen and (min-width: 960px){
-            position: static;
-            width: 120px;
-          }
-          @media screen and (min-width: 1050px){
-            width: 140px;
-          }
-          @media screen and (min-width: 1920px){
-            width: 200px;
-          }
-
-        }
-        .main__commentCount{
-          position: absolute;
-          bottom: 2.5px;
-          right: 10px;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          .main__commentImage{
-            width: 25px;
-            height: 25px;
-            margin-right: 5px;
-            @media screen and (min-width: 1920px){
-              width: 40px;
-              height: 40px;
-
-            }
-          }
-          .main__count{
-            font-size: 20;
-            color: darken($lightGray, 25%);
-            margin: 0;
-            @media screen and (min-width: 1920px){
-              font-size: 28px;
-            }
-          }
-          @media screen and (min-width: 960px){
-            position: static;
-            width: 40px;
-            margin-right: 10px;
-          }
-          @media screen and (min-width: 1920px){
-            margin-right: 20px;
-            width: 80px;
-          }
-        }
-        @media screen and (min-width: 768px){
-          width: 90%;
-        }
-        @media screen and (min-width: 960px){
-          display: flex;
-          flex-flow: row nowrap;
-          justify-content: space-between;
-          align-items: center;
-          width: 650px;
-        }
-        @media screen and (min-width: 1050px){
-          width: 720px;
-        }
-        @media screen and (min-width: 1240px){
-          width: 90%;
-        }
         @media screen and (min-width: 1920px){
-          width: 1200px;
+          width: 350px;
+        }
+      }
+      @media screen and (min-width: 960px){
+        height: calc(100% - 70px);
+      }
+    }
+    @media screen and (min-width: 960px){
+      height: calc(100% - 70px);
+    }
+  }
+  .eventsBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .controlPanel{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+      width: 94%;
+      border-bottom: 1px solid $lightGray;
+      &__button{
+        width: 200px;
+        outline: 0;
+        border: 0;
+        background: $lightGreen;
+        color: $white;
+        font-size: 18px;
+        padding: 5px;
+        margin-top: 30px;
+        border-radius: 2.5px;
+      }
+      @media screen and (min-width: 960px){
+        width: 240px;
+        margin-left: 30px;
+        border-bottom: 0;
+        height: calc(90vh - 120px);
+        margin-top: 15px;
+        align-items: flex-start;
+        &__button{
+          position: relative;
+          margin-top: 30px;
+          &::after{
+            content: "";
+            height: 1px;
+            width: 110%;
+            background: $lightGray;
+            position: absolute;
+            bottom: -60px;
+            left: -5%;
+          }
         }
       }
     }
-    @media screen and (min-width: 768px){
-      margin-left: 25px;
-      width: 100%;
+    .events{
+            &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+            &::-webkit-scrollbar-track {
+              background: lighten($lightGray, 15%);
+      }
+
+            &::-webkit-scrollbar-thumb {
+        background-color: darken($lightGray, 20%);
+      }
+      .sort{
+        margin-top: 20px;
+        margin-left: 15px;
+        &__select{
+          border: 0;
+          outline: none;
+          padding: 5px 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          -webkit-appearance: none;
+          border-radius: 2.5px;
+          position: relative;
+          &::after{
+            content: url("/image/arrow.svg");
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+          }
+        }
+      }
+      .eventsWrapper{
+        margin-top: 30px;
+        .eventCard{
+          width: 92%;
+          margin: 10px auto;
+          background: $white;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 2.5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          &__bg{
+            width: 100%;
+            height: 40%;
+            .eventCard__bgImage{
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+          .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .user{
+            margin-top: 15px;
+            &__avatar{
+              width: 70px;
+              height: 70px;
+              border-radius: 50%;
+            }
+          }
+          &__header{
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0 5px;
+            margin: 5px 0;
+          }
+          &__created{
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+            color: darken($lightGray, 1.5%);
+            padding: 0 5px;
+            margin: 5px 0;
+          }
+          &__desc{
+            width: 92%;
+            text-align: justify;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.4;
+            color: darken($lightGray, 50%);
+            margin: 10px auto;
+          }
+          .eventFooter{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .posts{
+              width: 30%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin-left: 10px;
+              &__icon{
+                width: 30px;
+              }
+              &__txt{
+                width: 100%;
+                text-align: center;
+              }
+            }
+            .location{
+              width: 30%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin-left: 10px;
+              &__icon{
+                width: 30px;
+              }
+              &__txt{
+                width: 100%;
+                text-align: center;
+              }
+            }
+            .member{
+              width: 30%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              &__icon{
+                width: 30px;
+              }
+              &__txt{
+                width: 100%;
+                text-align: center;
+              }
+            }
+          }
+          @media screen and (min-width: 440px){
+            width: 410px;
+          }
+        }
+
+      }
+      @media screen and (min-width: 960px){
+        height: calc(100vh - 120px);
+        width: calc(100% - 250px);
+        overflow-y: scroll;
+
+      }
     }
-  }
-  @media screen and (min-width: 768px){
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  @media screen and (min-width: 1050px){
-    margin-top: 20px;
+    @media screen and (min-width: 960px){
+      flex-direction: row-reverse;
+    }
   }
 }
