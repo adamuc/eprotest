@@ -2,7 +2,7 @@
 import '../../css/forum/global.scss';
 
 import $ from '../app';
-<<<<<<< HEAD
+
 $(document).ready(() =>{
     function menu() {
         let click = false;
@@ -48,7 +48,6 @@ $(document).ready(() =>{
     category();
     menu();
 });
-=======
 
 $(document).ready(() => {
     $('.wrapper__user').hover(() => {
@@ -73,4 +72,3 @@ $(document).ready(() => {
         window.location.href = '/logout';
     });
 });
->>>>>>> 480d4f9412c999cf3feb028a1db66665e8915488
